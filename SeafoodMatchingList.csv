@@ -1,0 +1,567 @@
+DataSupplier,UniqueSeafoodSpecies,CommonSpeciesName,SACN_Desc,CFValue,ISSCAAP_Desc,ISSCAAP_Code
+HMRC,Crab,Crab,Shellfish,0.45,Crustaceans,4
+NDNS,CRAB BOILED,Crab,Shellfish,1,Crustaceans,4
+NDNS,CRAB CANNED,Crab,Shellfish,1,Crustaceans,4
+PHE,"Crab, average of white and brown meat",Crab,Shellfish,1,Crustaceans,4
+NDNS,"Crab, canned",Crab,Shellfish,1,Crustaceans,4
+NDNS,"Crab, fresh",Crab,Shellfish,1,Crustaceans,4
+MMO,Crabs,Crab,Shellfish,0.45,Crustaceans,4
+HMRC,Freshwater crayfish ,Crayfish ,Shellfish,0.45,Crustaceans,4
+HMRC,Rock lobster and  sea crawfish,Crayfish ,Shellfish,0.45,Crustaceans,4
+HMRC,Rock lobster and sea crawfish,Crayfish ,Shellfish,0.45,Crustaceans,4
+NDNS,Lobster boiled,Lobster,Shellfish,1,Crustaceans,4
+NDNS,LOBSTER BOILED FLESH ONLY,Lobster,Shellfish,1,Crustaceans,4
+MMO,Lobsters,Lobster,Shellfish,0.45,Crustaceans,4
+HMRC,Lobster Homarus spp,Lobster ,Shellfish,0.45,Crustaceans,4
+HMRC,Lobster Homarus spp.,Lobster ,Shellfish,0.45,Crustaceans,4
+HMRC,"Lobster, Norway",Nephrops,Shellfish,0.45,Crustaceans,4
+HMRC,Nephrops,Nephrops,Shellfish,0.45,Crustaceans,4
+NDNS,SCAMPI COATED FRIED BLENDED,Nephrops,Shellfish,1,Crustaceans,4
+NDNS,SCAMPI IN BREADCRUMBS FROZEN GRILLED OR OVEN BAKED,Nephrops,Shellfish,1,Crustaceans,4
+NDNS,"Scampi, fried",Nephrops,Shellfish,1,Crustaceans,4
+NDNS,"Scampi, grilled or oven baked",Nephrops,Shellfish,1,Crustaceans,4
+HMRC,Other crustaceans,Other molluscs,Shellfish,0.45,Crustaceans,4
+NDNS,PRAWN BHUNA,Prawn,Shellfish,1,Crustaceans,4
+NDNS,"Prawn bhuna, curry",Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN BIRYANI,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN CHOW MEIN,Prawn,Shellfish,1,Crustaceans,4
+NDNS,"Prawn chow mein, stir fry (with noodles)",Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN CURRY,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN CURRY CREAM/COCONUT SAUC,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN CURRY TAKEAWAY NO RICE,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN CURRY WITH RICE READY MEAL EG ICELAND,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN MAYONNAISE PURCHASED,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWN STIR-FRY IN OYSTER SAUCE,Prawn,Shellfish,1,Crustaceans,4
+NDNS,Prawn/seafood cocktail sandwich/deli filler,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWNS BOILED FLESH ONLY,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWNS CANNED DRAINED,Prawn,Shellfish,1,Crustaceans,4
+NDNS,PRAWNS WRAPPED IN FILO PASTRY,Prawn,Shellfish,1,Crustaceans,4
+PHE,"Prawns, king, warm-water, raw",Prawn,Shellfish,1,Crustaceans,4
+NDNS,"Prawns, wrapped in filo pastry",Prawn,Shellfish,1,Crustaceans,4
+NDNS,"Prawns/shrimps, boiled",Prawn,Shellfish,1,Crustaceans,4
+HMRC,Shrimp Crangon spp,Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp,  coldwater",Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp, coldwater",Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp, Crangon spp.",Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp, deep-water rose",Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp, miscellaneous",Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp, miscellaneous ",Prawn,Shellfish,0.45,Crustaceans,4
+HMRC,"Shrimp, warmwater",Prawn,Shellfish,0.45,Crustaceans,4
+MMO,Shrimps and Prawns,Prawn,Shellfish,0.45,Crustaceans,4
+NDNS,SHRIMPS BOILED FLESH ONLY,Prawn,Shellfish,1,Crustaceans,4
+NDNS,SHRIMPS POTTED IN BUTTER,Prawn,Shellfish,1,Crustaceans,4
+Norwegian_FC,"Conger eel, raw",Conger eel,Oily,1,Diadromous,2
+HMRC,Cusk-eel,Cusk-eel,Lean,0.48,Diadromous,2
+HMRC,Eel,Eel,Oily,0.48,Diadromous,2
+NDNS,EEL JELLIED,Eel,Oily,1,Diadromous,2
+NDNS,EEL STEWED FLESH ONLY,Eel,Oily,1,Diadromous,2
+Norwegian_FC,"Eel, raw",Eel,Oily,1,Diadromous,2
+HMRC,Other salmonids,Other marine fish,Oily,0.48,Diadromous,2
+DEFRA_household,119,Salmon,Oily,1,Diadromous,2
+DEFRA_household,10701,Salmon,Oily,1,Diadromous,2
+DEFRA_household,10702,Salmon,Oily,1,Diadromous,2
+CEFAS,Atlantic salmon,Salmon,Oily,0.5,Diadromous,2
+NDNS,"FISHCAKES, SALMON, RETAIL, COATED IN BREADCRUMBS, BAKED/GRILLED",Salmon,Oily,1,Diadromous,2
+HMRC,Salmon,Salmon,Oily,0.5,Diadromous,2
+NDNS,Salmon en croute,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON EN CROUTE WITH SAUCE & PUFF PASTRY,Salmon,Oily,1,Diadromous,2
+NDNS,Salmon fishcake,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON FISHCAKES FRIED IN OLIVE OIL,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON FISHCAKES GRILLED,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON FISHCAKES RETAIL,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON FRIED IN VEGETABLE OIL,Salmon,Oily,1,Diadromous,2
+NDNS,Salmon in a watercress sauce,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON IN WATERCRESS SAUCE,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON MORNAY WITH BROCCOLI READY MEAL EG HEINZ WW,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON MOUSSE PURCHASED,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON OCEAN PIE E.G. YOUNGS,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON RED CANNED IN BRINE FISH AND BONES,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON RED CANNED IN BRINE FISH ONLY,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON SMOKED,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON STEAMED NO BONES,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON UNSPECIFIED CANNED IN BRINE FISH ONLY,Salmon,Oily,1,Diadromous,2
+NDNS,SALMON UNSPECIFIED CANNED IN BRINE WITH BONES,Salmon,Oily,1,Diadromous,2
+NDNS,"Salmon, canned",Salmon,Oily,1,Diadromous,2
+NDNS,"Salmon, cold smoked",Salmon,Oily,1,Diadromous,2
+Norwegian_FC,"Salmon, farmed, raw",Salmon,Oily,1,Diadromous,2
+NDNS,"Salmon, fried",Salmon,Oily,1,Diadromous,2
+NDNS,"SALMON, GRILLED OR BAKED",Salmon,Oily,1,Diadromous,2
+NDNS,"Salmon, grilled or oven baked",Salmon,Oily,1,Diadromous,2
+NDNS,"SALMON, PINK, CANNED IN BRINE FISH ONLY",Salmon,Oily,1,Diadromous,2
+NDNS,"SALMON, RAW",Salmon,Oily,1,Diadromous,2
+NDNS,"SALMON, RED, CANNED IN BRINE, NOT SKINLESS AND BONELESS",Salmon,Oily,1,Diadromous,2
+NDNS,"SALMON, RED, CANNED IN BRINE, SKINLESS AND BONELESS",Salmon,Oily,1,Diadromous,2
+NDNS,"SALMON, SMOKED, COLD SMOKED ONLY",Salmon,Oily,1,Diadromous,2
+NDNS,"Salmon, steamed",Salmon,Oily,1,Diadromous,2
+CEFAS,Salmonids - not elsewhere identified,Salmon,Oily,0.5,Diadromous,2
+NDNS,SMOKED SALMON PATE,Salmon,Oily,1,Diadromous,2
+NDNS,"SUSHI, SALMON BASED",Salmon,Oily,1,Diadromous,2
+CEFAS,Rainbow trout,Trout,Oily,0.43,Diadromous,2
+CEFAS,Sea trout (=brown trout) ,Trout,Oily,0.43,Diadromous,2
+HMRC,Trout,Trout,Oily,0.43,Diadromous,2
+NDNS,TROUT SMOKED BAKED ETC NO BONES,Trout,Oily,1,Diadromous,2
+NDNS,TROUT STEAMED FISH ONLY,Trout,Oily,1,Diadromous,2
+NDNS,"TROUT, RAINBOW, BAKED",Trout,Oily,1,Diadromous,2
+PHE,"Trout, rainbow, chilled/frozen, raw, flesh only",Trout,Oily,1,Diadromous,2
+NDNS,"Trout, rainbow/brown",Trout,Oily,1,Diadromous,2
+HMRC,Barbel,Barbel,Lean,0.43,Freshwater,1
+HMRC,Freshwater catfish,Basa,Lean,0.5,Freshwater,1
+NDNS,PANGAS/RIVER COBBLER GRILLED OR BAKED,Basa,Lean,1,Freshwater,1
+HMRC,Pangasius,Basa,Lean,0.5,Freshwater,1
+HMRC,Carp,Carp,Lean,0.42,Freshwater,1
+CEFAS,Common carp,Carp,Lean,0.42,Freshwater,1
+Norwegian_FC,"Catfish, raw",Catfish,Lean,1,Freshwater,1
+CEFAS,Arctic char,Char,Oily,0.43,Freshwater,1
+HMRC,Char,Char,Oily,0.43,Freshwater,1
+Norwegian_FC,"Char, raw",Char,Oily,1,Freshwater,1
+HMRC,Chub,Chub,Lean,0.43,Freshwater,1
+HMRC,Nile perch,Nile perch,Lean,0.43,Freshwater,1
+HMRC,Orfe,Orfe,Lean,0.43,Freshwater,1
+CEFAS,Freshwater fishes- not elsewhere identified,Other freshwater fish,Lean,0.43,Freshwater,1
+HMRC,Other freshwater fish,Other freshwater fish,Lean,0.43,Freshwater,1
+HMRC,Perch ,Perch ,Lean,0.43,Freshwater,1
+Norwegian_FC,"Perch, raw",Perch ,Lean,1,Freshwater,1
+HMRC,Pike,Pike,Lean,0.43,Freshwater,1
+Norwegian_FC,"Pike northern, raw",Pike,Lean,1,Freshwater,1
+HMRC,Pike-perch,Pike-perch,Lean,0.43,Freshwater,1
+Norwegian_FC,"Powan, raw",Powan,Lean,1,Freshwater,1
+HMRC,Roach,Roach,Lean,0.43,Freshwater,1
+HMRC,Rudd,Rudd,Lean,0.43,Freshwater,1
+HMRC,Tench,Tench,Lean,0.43,Freshwater,1
+CEFAS,Nile tilapia,Tilapia,Lean,0.38,Freshwater,1
+HMRC,Tilapia,Tilapia,Lean,0.38,Freshwater,1
+NDNS,Anchovies,Anchovy,Oily,1,Marine,3
+NDNS,"ANCHOVIES, CANNED, FISH ONLY",Anchovy,Oily,1,Marine,3
+HMRC,Anchovy,Anchovy,Oily,0.55,Marine,3
+Norwegian_FC,"Blue ling, raw",Blue ling,Lean,1,Marine,3
+HMRC,Blue whiting,Blue whiting,Lean,0.5,Marine,3
+HMRC,"Seabream, gilthead",Bream,Lean,0.5,Marine,3
+HMRC,"Seabream, other",Bream,Lean,0.5,Marine,3
+HMRC,Brill,Brill,Lean,0.45,Marine,3
+HMRC,Cobia,Cobia,Lean,0.5,Marine,3
+HMRC,Cod,Cod,Lean,0.5,Marine,3
+NDNS,COD BAKED OR GRILLED NO BUTTER,Cod,Lean,1,Marine,3
+NDNS,COD BAKED OR GRILLED WITH OLIVE OIL,Cod,Lean,1,Marine,3
+NDNS,COD BAKED WITH BUTTER,Cod,Lean,1,Marine,3
+NDNS,COD COATED BREADCRUMBS FROZEN FRIED BLENDED VEG OI,Cod,Lean,1,Marine,3
+NDNS,COD COATED IN FLOUR FRIED BLENDED VEG OIL,Cod,Lean,1,Marine,3
+NDNS,COD COATED IN FLOUR FRIED IN OLIVE OIL,Cod,Lean,1,Marine,3
+NDNS,COD DRIED SALTED BOILED,Cod,Lean,1,Marine,3
+NDNS,COD FRIED IN PUFA NO COATING,Cod,Lean,1,Marine,3
+NDNS,COD FROZEN IN PARSLEY SAUCE BOILED,Cod,Lean,1,Marine,3
+NDNS,Cod grilled or oven baked,Cod,Lean,1,Marine,3
+NDNS,COD IN BATTER FRIED IN COMMERCIAL OIL,Cod,Lean,1,Marine,3
+NDNS,COD IN BATTER FRIED PUFA OIL,Cod,Lean,1,Marine,3
+NDNS,COD IN BATTER FROZEN BAKED,Cod,Lean,1,Marine,3
+NDNS,COD IN BATTER FRY BLENDED OIL,Cod,Lean,1,Marine,3
+NDNS,COD IN BATTER FRY IN DRIPPING,Cod,Lean,1,Marine,3
+NDNS,"Cod in batter/breadcrumb, fried",Cod,Lean,1,Marine,3
+NDNS,"Cod in batter/breadcrumb, grilled or oven baked",Cod,Lean,1,Marine,3
+NDNS,COD IN BREADCRUMBS FRIED PUFA,Cod,Lean,1,Marine,3
+NDNS,COD IN BREADCRUMBS FRY BLENDED,Cod,Lean,1,Marine,3
+NDNS,COD IN BREADCRUMBS GRILLED / OVEN BAKED,Cod,Lean,1,Marine,3
+NDNS,Cod in white/parsley sauce,Cod,Lean,1,Marine,3
+NDNS,COD POACHED IN WHOLE MILK NO FAT,Cod,Lean,1,Marine,3
+NDNS,COD SMOKED STEAMED,Cod,Lean,1,Marine,3
+NDNS,COD STEAMED,Cod,Lean,1,Marine,3
+PHE,"Cod, chilled/frozen, raw, flesh only",Cod,Lean,1,Marine,3
+NDNS,"COD, MICROWAVED, FLESH ONLY",Cod,Lean,1,Marine,3
+NDNS,COLEY STEAMED; POACHED IN WATER,Coley,Lean,1,Marine,3
+PHE,"Coley, chilled/frozen, raw, flesh only",Coley,Lean,1,Marine,3
+MMO,Saithe,Coley,Lean,0.5,Marine,3
+HMRC,Saithe (=Coalfish),Coley,Lean,0.5,Marine,3
+Norwegian_FC,"Cusk, tusk, raw",Cusk,Lean,1,Marine,3
+HMRC,Dab,Dab,Lean,0.45,Marine,3
+HMRC,Dogfish,Dogfish,Lean,0.5,Marine,3
+NDNS,DOGFISH BATTERED NO BONES FRIED COMMERCIAL OIL,Dogfish,Lean,1,Marine,3
+Norwegian_FC,"Dogfish, raw",Dogfish,Lean,1,Marine,3
+HMRC,"Flounder, European",Flounder,Lean,0.45,Marine,3
+HMRC,"Flounder, other",Flounder,Lean,0.45,Marine,3
+Norwegian_FC,"Garfish, raw",Garfish,Oily,1,Marine,3
+HMRC,Grenadier,Grenadier,Lean,0.5,Marine,3
+HMRC,Gurnard,Gurnard,Lean,0.5,Marine,3
+HMRC,Haddock,Haddock,Lean,0.5,Marine,3
+NDNS,HADDOCK BAKED OR GRILLED NO BUTTER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK BAKED OR GRILLED WITH BUTTER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK COATED IN BATTER FRIED IN BLEND VEG OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK COATED IN BATTER FRIED IN BLENDED VEG OIL TAKEAWAY,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK COATED IN FLOUR FRIED IN BLENDED VEG OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK FROZEN BREADCRUMBS FRIED BLENDED OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK IN BATTER FRIED IN PUFA OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK IN BATTER PURCHASED OVEN BAKED,Haddock,Lean,1,Marine,3
+NDNS,"Haddock in breadcrumb/batter, fried",Haddock,Lean,1,Marine,3
+NDNS,"Haddock in breadcrumb/batter, grilled or oven baked",Haddock,Lean,1,Marine,3
+NDNS,HADDOCK IN BREADCRUMBS FRIED IN BLENDED VEG OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK IN BREADCRUMBS FRIED IN PUFA OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK IN BREADCRUMBS FROZEN GRILLED/BAKED,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK NO COATING FRIED IN BLENDED VEG OIL,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK NO COATING FRIED IN PUFA,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK POACHED IN MILK AND BUTTER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK POACHED IN WHOLE MILK NO BUTTER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK SMOKED BAKED OR GRILLED NO BUTTER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK SMOKED BAKEDOR GRILLED WITH BUTTER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK SMOKED POACHED IN MILK AND BUTTER,Haddock,Lean,1,Marine,3
+NDNS,"HADDOCK SMOKED POACHED IN SEMI-SKIMMED MILK, NO BUTTER",Haddock,Lean,1,Marine,3
+NDNS,HADDOCK SMOKED POACHED IN WATER,Haddock,Lean,1,Marine,3
+NDNS,HADDOCK STEAMED NO BUTTER,Haddock,Lean,1,Marine,3
+PHE,"Haddock, chilled/frozen, raw, flesh only",Haddock,Lean,1,Marine,3
+NDNS,"Haddock, grilled or oven baked (including smoked)",Haddock,Lean,1,Marine,3
+HMRC,Hake,Hake,Lean,0.5,Marine,3
+NDNS,HAKE GRILLED OR OVEN BAKED,Hake,Lean,1,Marine,3
+NDNS,"Hake, grilled or oven baked",Hake,Lean,1,Marine,3
+NDNS,HOKI GRILLED,Hake,Lean,1,Marine,3
+CEFAS,Atlantic halibut,Halibut,Oily,0.45,Marine,3
+MMO,Halibut,Halibut,Oily,0.45,Marine,3
+NDNS,HALIBUT STEAMED,Halibut,Oily,1,Marine,3
+HMRC,"Halibut, Atlantic",Halibut,Oily,0.45,Marine,3
+Norwegian_FC,"Halibut, Atlantic, raw",Halibut,Oily,1,Marine,3
+HMRC,"Halibut, Greenland",Halibut,Oily,0.45,Marine,3
+HMRC,"Halibut, other",Halibut,Oily,0.45,Marine,3
+DEFRA_household,10601,Herring,Oily,1,Marine,3
+DEFRA_household,10602,Herring,Oily,1,Marine,3
+HMRC,Herring,Herring,Oily,0.59,Marine,3
+NDNS,HERRING CANNED IN OIL FISH ONLY,Herring,Oily,1,Marine,3
+NDNS,HERRING CANNED IN TOMATO SAUCE,Herring,Oily,1,Marine,3
+NDNS,HERRING GRILLED NO BONES,Herring,Oily,1,Marine,3
+NDNS,HERRING NO BONES COATED BLENDED,Herring,Oily,1,Marine,3
+NDNS,"Herring, in a tomato sauce, canned",Herring,Oily,1,Marine,3
+NDNS,"Herring, pickled",Herring,Oily,1,Marine,3
+Norwegian_FC,"Herring, summer, raw",Herring,Oily,1,Marine,3
+NDNS,HERRINGS PICKLED,Herring,Oily,1,Marine,3
+NDNS,Kipper,Herring,Oily,1,Marine,3
+NDNS,KIPPER BAKED,Herring,Oily,1,Marine,3
+NDNS,KIPPER BOIL IN BAG BOILED,Herring,Oily,1,Marine,3
+NDNS,KIPPER BOIL IN BAG BOILED WITH BUTTER,Herring,Oily,1,Marine,3
+NDNS,KIPPER NO BONES BAKED BUTTER,Herring,Oily,1,Marine,3
+HMRC,"Horse  mackerel, Atlantic",Horse mackerel,Oily,0.43,Marine,3
+HMRC,"Horse  mackerel, other",Horse mackerel,Oily,0.43,Marine,3
+MMO,Horse Mackerel,Horse mackerel,Oily,0.43,Marine,3
+HMRC,"Horse mackerel, Atlantic",Horse mackerel,Oily,0.43,Marine,3
+HMRC,"Horse mackerel, other",Horse mackerel,Oily,0.43,Marine,3
+HMRC,John dory,John dory,Lean,0.5,Marine,3
+HMRC,Lemon sole,Lemon sole,Lean,0.45,Marine,3
+NDNS,LEMON SOLE FRIED IN OLIVE OIL,Lemon sole,Lean,1,Marine,3
+NDNS,LEMON SOLE GRILLED NO ADDED FAT,Lemon sole,Lean,1,Marine,3
+NDNS,LEMON SOLE IN BATTER (M&S) FRIED IN FLORA,Lemon sole,Lean,1,Marine,3
+NDNS,Lemon sole in breadcrumb/batter,Lemon sole,Lean,1,Marine,3
+NDNS,LEMON SOLE STEAMED,Lemon sole,Lean,1,Marine,3
+Norwegian_FC,"Lemon sole, raw",Lemon sole,Lean,1,Marine,3
+HMRC,Ling,Ling,Lean,0.5,Marine,3
+Norwegian_FC,"Ling, raw",Ling,Lean,1,Marine,3
+HMRC,Mackerel,Mackerel,Oily,0.43,Marine,3
+NDNS,MACKEREL CANNED IN BRINE FISH ONLY,Mackerel,Oily,1,Marine,3
+NDNS,"MACKEREL CANNED IN MUSTARD SAUCE, FISH AND SAUCE",Mackerel,Oily,1,Marine,3
+NDNS,MACKEREL CANNED IN OIL FISH ONLY,Mackerel,Oily,1,Marine,3
+NDNS,"Mackerel fillet, in a tomato sauce, canned",Mackerel,Oily,1,Marine,3
+NDNS,"Mackerel fillet, in oil, canned",Mackerel,Oily,1,Marine,3
+NDNS,MACKEREL IN TOMATO SAUCE,Mackerel,Oily,1,Marine,3
+NDNS,Mackerel pate,Mackerel,Oily,1,Marine,3
+NDNS,MACKEREL SMOKED CANNED IN OIL FISH ONLY,Mackerel,Oily,1,Marine,3
+NDNS,MACKEREL SMOKED NOT CANNED,Mackerel,Oily,1,Marine,3
+NDNS,MACKEREL UNSMOKED BAKED/GRILLED NO BONES NO BUTTER,Mackerel,Oily,1,Marine,3
+NDNS,MACKEREL UNSMOKED CANNED FISH AND OIL,Mackerel,Oily,1,Marine,3
+PHE,"Mackerel, chilled/frozen, raw, flesh only",Mackerel,Oily,1,Marine,3
+NDNS,SMOKED MACKEREL FILLETS CANNED IN BRINE,Mackerel,Oily,1,Marine,3
+NDNS,SMOKED MACKEREL PATE,Mackerel,Oily,1,Marine,3
+HMRC,Megrim,Megrim,Lean,0.45,Marine,3
+Norwegian_FC,"Angler fish, raw",Monkfish,Lean,1,Marine,3
+HMRC,Monk,Monkfish,Lean,0.5,Marine,3
+NDNS,"MONKFISH, GRILLED",Monkfish,Lean,1,Marine,3
+NDNS,"Monkfish, grilled or ovenbaked",Monkfish,Lean,1,Marine,3
+MMO,Monks or Anglers,Monkfish,Lean,0.5,Marine,3
+DEFRA_household,120,Other marine fish,Oily,1,Marine,3
+DEFRA_household,10201,Other marine fish,Lean,1,Marine,3
+DEFRA_household,10202,Other marine fish,Lean,1,Marine,3
+DEFRA_household,10801,Other marine fish,Oily,1,Marine,3
+DEFRA_household,11401,Other marine fish,Lean,1,Marine,3
+NDNS,COD HADDOCK FRY BLENDED NOCOAT,Other marine fish,Lean,1,Marine,3
+NDNS,COD HADDOCK FRY LARD NOCOATING,Other marine fish,Lean,1,Marine,3
+NDNS,COD HADDOCK POACHED IN MILK,Other marine fish,Lean,1,Marine,3
+NDNS,COD HADDOCK WITH LOSSES,Other marine fish,Lean,1,Marine,3
+NDNS,"COD/HADDOCK COATED IN BREADCRUMBS, REDUCED FAT, GRILLED",Other marine fish,Lean,1,Marine,3
+NDNS,"Cod/haddock fillet, fried",Other marine fish,Lean,1,Marine,3
+NDNS,COD/HADDOCK IN BATTER FRIED IN PALM OIL TK/AWAY,Other marine fish,Lean,1,Marine,3
+NDNS,"Cod/haddock in batter, from takeaway",Other marine fish,Lean,1,Marine,3
+NDNS,Cod/haddock steamed,Other marine fish,Lean,1,Marine,3
+NDNS,"Cod/haddock, poached in milk",Other marine fish,Lean,1,Marine,3
+NDNS,"Cod/haddock, smoked, poached in milk",Other marine fish,Lean,1,Marine,3
+DEFRA_eatenOut,eo120101,Other marine fish,Lean,1,Marine,3
+DEFRA_eatenOut,eo120102,Other marine fish,Lean,1,Marine,3
+DEFRA_eatenOut,eo120201,Other marine fish,Oily,1,Marine,3
+DEFRA_eatenOut,eo120202,Other marine fish,Oily,1,Marine,3
+DEFRA_eatenOut,eo1204,Other marine fish,Oily,1,Marine,3
+CEFAS,Marine fishes -not elsewhere identified,Other marine fish,Lean,0.5,Marine,3
+HMRC,Miscellaneous small pelagics ,Other marine fish,Oily,0.52,Marine,3
+MMO,Other Demersal (b),Other marine fish,Lean,0.5,Marine,3
+HMRC,Other flatfish,Other marine fish,Lean,0.45,Marine,3
+HMRC,Other groundfish,Other marine fish,Lean,0.5,Marine,3
+HMRC,Other marine fish,Other marine fish,Lean,0.5,Marine,3
+MMO,Other Pelagic,Other marine fish,Oily,0.5,Marine,3
+HMRC,Other sharks,Other marine fish,Lean,0.5,Marine,3
+NDNS,Whitebait,Other marine fish,Oily,1,Marine,3
+NDNS,WHITEBAIT COATED FRIED IN BLENDED OIL,Other marine fish,Oily,1,Marine,3
+PHE,"Pangasius, chilled/frozen, raw, flesh only",Pangasius,Lean,1,Marine,3
+HMRC,Picarel,Picarel,Oily,0.52,Marine,3
+NDNS,"Pilchard, in a tomato sauce, canned",Pilchard,Oily,1,Marine,3
+NDNS,PILCHARDS CANNED IN BRINE FISH ONLY,Pilchard,Oily,1,Marine,3
+NDNS,PILCHARDS IN TOMATO SAUCE CANNED,Pilchard,Oily,1,Marine,3
+MMO,Plaice,Plaice,Lean,0.45,Marine,3
+NDNS,PLAICE BAKED GRILLED NO BUTTER NO BONES NO SKIN,Plaice,Lean,1,Marine,3
+NDNS,PLAICE BAKED/GRILLED WITH BUTTER NO BONES/SKIN,Plaice,Lean,1,Marine,3
+NDNS,PLAICE FROZEN BREADCRUMBS FRIED BLENDED OIL,Plaice,Lean,1,Marine,3
+NDNS,PLAICE IN BATTER FRIED BLENDED,Plaice,Lean,1,Marine,3
+NDNS,PLAICE IN BATTER FRIED IN COMMERCIAL BLENDED OIL,Plaice,Lean,1,Marine,3
+NDNS,PLAICE IN BREADCRUMBS FROZEN GRILLED OR BAKED,Plaice,Lean,1,Marine,3
+NDNS,PLAICE IN BREADCRUMBS FROZEN GRILLED OR BAKED NO F,Plaice,Lean,1,Marine,3
+NDNS,PLAICE IN CRUMBS FRIED BLENDED,Plaice,Lean,1,Marine,3
+NDNS,PLAICE NO BONES FLOUR BLENDED,Plaice,Lean,1,Marine,3
+NDNS,PLAICE STEAMED,Plaice,Lean,1,Marine,3
+NDNS,PLAICE WITH COOKING LOSSES,Plaice,Lean,1,Marine,3
+PHE,"Plaice, chilled/frozen, raw, flesh only",Plaice,Lean,1,Marine,3
+HMRC,"Plaice, European",Plaice,Lean,0.45,Marine,3
+NDNS,"Plaice, grilled or oven baked",Plaice,Lean,1,Marine,3
+HMRC,"Plaice, other",Plaice,Lean,0.45,Marine,3
+HMRC,Alaska pollock,Pollock,Lean,0.5,Marine,3
+PHE,"Alaskan pollock, chilled/frozen, raw, flesh only",Pollock,Lean,1,Marine,3
+HMRC,Pollack,Pollock,Lean,0.5,Marine,3
+MMO,Pollack (Lythe),Pollock,Lean,0.5,Marine,3
+HMRC,Ray`s bream,Pomfret,Lean,0.5,Marine,3
+HMRC,Ray’s bream,Pomfret,Lean,0.5,Marine,3
+HMRC,Pouting (=Bib),Pouting,Lean,0.5,Marine,3
+HMRC,Ray,Ray,Lean,0.5,Marine,3
+HMRC,Red mullet,Red mullet,Lean,0.5,Marine,3
+HMRC,Redfish,Redfish,Lean,0.5,Marine,3
+Norwegian_FC,"Redfish, raw",Redfish,Lean,1,Marine,3
+MMO,Sand Eels,Sandeel,Oily,0.52,Marine,3
+HMRC,Sandeel,Sandeel,Oily,0.52,Marine,3
+HMRC,Sardine,Sardine,Oily,0.52,Marine,3
+NDNS,"Sardine fillet, in a tomato sauce, canned",Sardine,Oily,1,Marine,3
+NDNS,"Sardine fillet, in brine, canned",Sardine,Oily,1,Marine,3
+NDNS,"Sardine fillet, in oil, canned",Sardine,Oily,1,Marine,3
+NDNS,"Sardine, grilled or oven baked",Sardine,Oily,1,Marine,3
+MMO,Sardines,Sardine,Oily,0.52,Marine,3
+NDNS,SARDINES BRISLING SILD CANNED IN TOMATO SAUCE,Sardine,Oily,1,Marine,3
+NDNS,"SARDINES BRISLING SLID CANNED IN OIL, FISH ONLY",Sardine,Oily,1,Marine,3
+NDNS,SARDINES CANNED IN OIL FISH AND OIL,Sardine,Oily,1,Marine,3
+NDNS,"SARDINES, CANNED, IN BRINE",Sardine,Oily,1,Marine,3
+NDNS,"SARDINES, CANNED, IN SPRING WATER, FISH ONLY",Sardine,Oily,1,Marine,3
+PHE,"Sardines, chilled/frozen, raw, flesh and small bones",Sardine,Oily,1,Marine,3
+NDNS,"SARDINES, FRESH, GRILLED",Sardine,Oily,1,Marine,3
+HMRC,Scabbardfish,Scabbardfish,Lean,0.5,Marine,3
+MMO,Bass,Seabass,Lean,0.5,Marine,3
+CEFAS,European seabass,Seabass,Lean,0.5,Marine,3
+NDNS,SEA BASS BAKED OR GRILLED,Seabass,Lean,1,Marine,3
+NDNS,"Sea bass, baked or grilled",Seabass,Lean,1,Marine,3
+PHE,"Sea bass, chilled/frozen, raw, flesh only",Seabass,Lean,1,Marine,3
+HMRC,"Seabass, European",Seabass,Lean,0.5,Marine,3
+HMRC,"Seabass, other",Seabass,Lean,0.5,Marine,3
+Norwegian_FC,"Porbeagle, mackerel shark, raw",Shark,Oily,1,Marine,3
+Norwegian_FC,"Skate (ray), raw",Skate,Lean,1,Marine,3
+NDNS,SKATE GRILLED,Skate,Lean,1,Marine,3
+NDNS,SKATE IN BATTER NOBONE BLENDED,Skate,Lean,1,Marine,3
+NDNS,"Skate in batter, fried",Skate,Lean,1,Marine,3
+MMO,Skates and Rays,Skate,Lean,0.5,Marine,3
+HMRC,Smelt,Smelt,Oily,0.52,Marine,3
+MMO,Sole,Sole,Lean,0.45,Marine,3
+NDNS,SOLE IN CRUMBS FRIED BLENDED,Sole,Lean,1,Marine,3
+PHE,"Sole, chilled/frozen, raw, flesh only",Sole,Lean,1,Marine,3
+HMRC,"Sole, common",Sole,Lean,0.45,Marine,3
+HMRC,"Sole, other",Sole,Lean,0.45,Marine,3
+HMRC,Sprat (=Brisling),Sprat,Oily,0.52,Marine,3
+Norwegian_FC,"Sprat, raw",Sprat,Oily,1,Marine,3
+NDNS,SPRATS FRIED IN BLENDED OIL,Sprat,Oily,1,Marine,3
+NDNS,SPRATS FRIED IN PUFA OIL,Sprat,Oily,1,Marine,3
+HMRC,Swordfish,Swordfish,Oily,0.5,Marine,3
+NDNS,"SWORDFISH, GRILLED",Swordfish,Oily,1,Marine,3
+HMRC,Toothfish,Toothfish,Lean,0.5,Marine,3
+NDNS,FRESH TUNA STEAK GRILLED,Tuna,Oily,1,Marine,3
+NDNS,John west tuna twist (e.g. with tomato and herb dressing),Tuna,Oily,1,Marine,3
+NDNS,"SUSHI, TUNA BASED",Tuna,Oily,1,Marine,3
+NDNS,TUNA & PASTA BAKE WITH SWEETCORN CHEESE & SAUCE,Tuna,Oily,1,Marine,3
+NDNS,TUNA AND PASTA BAKE READY MEAL,Tuna,Oily,1,Marine,3
+NDNS,TUNA AND RED PEPPER FISH CAKES EG WAITROSE,Tuna,Oily,1,Marine,3
+NDNS,TUNA CANNED IN BRINE FISH ONLY,Tuna,Oily,1,Marine,3
+NDNS,TUNA CANNED IN OIL FISH ONLY,Tuna,Oily,1,Marine,3
+NDNS,TUNA CANNED IN OLIVE OIL FISH ONLY,Tuna,Oily,1,Marine,3
+NDNS,TUNA CANNED IN SUNFLOWER OIL FISH ONLY,Tuna,Oily,1,Marine,3
+NDNS,Tuna fishcake,Tuna,Oily,1,Marine,3
+NDNS,TUNA FRESH RAW,Tuna,Oily,1,Marine,3
+NDNS,TUNA IN CORONATION STYLE DRESSING,Tuna,Oily,1,Marine,3
+NDNS,TUNA IN OIL FISH AND OIL,Tuna,Oily,1,Marine,3
+NDNS,TUNA MAYONNAISE HOMEMADE,Tuna,Oily,1,Marine,3
+NDNS,TUNA MAYONNAISE SANDIWCH FILLERS,Tuna,Oily,1,Marine,3
+NDNS,TUNA MAYONNAISE SANDWICH FILLERS,Tuna,Oily,1,Marine,3
+NDNS,"Tuna mayonnaise, home made",Tuna,Oily,1,Marine,3
+NDNS,"Tuna mayonnaise, shop-bought",Tuna,Oily,1,Marine,3
+NDNS,TUNA PASTA,Tuna,Oily,1,Marine,3
+NDNS,Tuna pasta bake (with cheese),Tuna,Oily,1,Marine,3
+NDNS,Tuna pasta salad,Tuna,Oily,1,Marine,3
+NDNS,TUNA PATE,Tuna,Oily,1,Marine,3
+NDNS,"Tuna steak, grilled or oven baked",Tuna,Oily,1,Marine,3
+NDNS,TUNA TWIST IN MEDITERRANEAN TOMATO & HERB DRESSING (JOHN WEST),Tuna,Oily,1,Marine,3
+HMRC,"Tuna, albacore",Tuna,Oily,0.5,Marine,3
+HMRC,"Tuna, bigeye",Tuna,Oily,0.5,Marine,3
+HMRC,"Tuna, bluefin",Tuna,Oily,0.5,Marine,3
+NDNS,"TUNA, CANNED, IN SPRING WATER, FISH ONLY",Tuna,Oily,1,Marine,3
+PHE,"Tuna, chilled/frozen, raw, flesh only",Tuna,Oily,1,Marine,3
+NDNS,"TUNA, FRESH, STEAK GRILLED/BAKED",Tuna,Oily,1,Marine,3
+NDNS,"Tuna, in brine, canned",Tuna,Oily,1,Marine,3
+NDNS,"Tuna, in spring water, canned",Tuna,Oily,1,Marine,3
+HMRC,"Tuna, miscellaneous ",Tuna,Oily,0.5,Marine,3
+HMRC,"Tuna, skipjack",Tuna,Oily,0.5,Marine,3
+HMRC,"Tuna, yellowfin",Tuna,Oily,0.5,Marine,3
+HMRC,Turbot,Turbot,Lean,0.45,Marine,3
+Norwegian_FC,"Turbot, raw",Turbot,Lean,1,Marine,3
+HMRC,Weever,Weever,Lean,0.5,Marine,3
+HMRC,Whiting,Whiting,Lean,0.5,Marine,3
+NDNS,WHITING BAKED OR GRILLED NO BUTTER/BONES/SKIN,Whiting,Lean,1,Marine,3
+NDNS,WHITING BREADCRUMBS FRIED BLEND VEG OIL NO BONES,Whiting,Lean,1,Marine,3
+Norwegian_FC,"Whiting, raw",Whiting,Lean,1,Marine,3
+HMRC,Witch,Witch,Lean,0.45,Marine,3
+HMRC,Jellyfish,Jellyfish,Other,0.8,Miscellaneous,7
+HMRC,Sea cucumber,Sea cucumber,Other,0.3,Miscellaneous,7
+HMRC,Sea urchin,Sea urchin,Other,0.3,Miscellaneous,7
+HMRC,Abalone,Abalone,Shellfish,0.3,Molluscs,5
+HMRC,Clam,Clam,Shellfish,0.3,Molluscs,5
+NDNS,CLAMS CANNED SEASONED,Clam,Shellfish,1,Molluscs,5
+NDNS,"Clams, boiled",Clam,Shellfish,1,Molluscs,5
+HMRC,Japanese carpet shell,Clam,Shellfish,0.3,Molluscs,5
+CEFAS,Japanese carpet shell (=Manila clam),Clam,Shellfish,0.3,Molluscs,5
+CEFAS,Northern quahog (=Hard clam),Clam,Shellfish,0.3,Molluscs,5
+HMRC,Sand gaper,Clam,Shellfish,0.3,Molluscs,5
+MMO,Cockles,Cockle,Shellfish,0.3,Molluscs,5
+NDNS,COCKLES BOILED WITHOUT SHELLS,Cockle,Shellfish,1,Molluscs,5
+NDNS,COCKLES CANNED BOTTLED NO SHELLS,Cockle,Shellfish,1,Molluscs,5
+CEFAS,Common edible cockle,Cockle,Shellfish,0.3,Molluscs,5
+HMRC,Cuttlefish,Cuttlefish,Other,0.8,Molluscs,5
+CEFAS,Sea mussels,Mussel,Shellfish,0.3,Molluscs,5
+HMRC,Mussel Mytilus spp,Mussel ,Shellfish,0.3,Molluscs,5
+HMRC,Mussel Mytilus spp.,Mussel ,Shellfish,0.3,Molluscs,5
+Norwegian_FC,"Mussel, blue, raw",Mussel ,Shellfish,1,Molluscs,5
+HMRC,"Mussel, other",Mussel ,Shellfish,0.3,Molluscs,5
+NDNS,MUSSELLS CANNED BOTTLED NO SHELLS,Mussel ,Shellfish,1,Molluscs,5
+MMO,Mussels,Mussel ,Shellfish,0.3,Molluscs,5
+NDNS,MUSSELS BOILED,Mussel ,Shellfish,1,Molluscs,5
+NDNS,"MUSSELS IN WHITE WINE SAUCE, COOKED",Mussel ,Shellfish,1,Molluscs,5
+NDNS,MUSSELS NOT CANNED NO SHELLS,Mussel ,Shellfish,1,Molluscs,5
+NDNS,"Mussels, boiled",Mussel ,Shellfish,1,Molluscs,5
+NDNS,"Mussels, in a white wine sauce",Mussel ,Shellfish,1,Molluscs,5
+HMRC,Octopus,Octopus,Other,0.8,Molluscs,5
+CEFAS,Marine mollusc- not elsewhere identified,Other molluscs,Shellfish,0.3,Molluscs,5
+MMO,Other Shellfish,Other molluscs,Shellfish,0.45,Molluscs,5
+DEFRA_household,11702,Other molluscs and aquatic invertebrates,Shellfish,1,Molluscs,5
+DEFRA_household,11703,Other molluscs and aquatic invertebrates,Shellfish,1,Molluscs,5
+DEFRA_eatenOut,eo1203,Other molluscs and aquatic invertebrates,Shellfish,1,Molluscs,5
+HMRC,Other cephalopods,Other molluscs and aquatic invertebrates,Other,0.8,Molluscs,5
+HMRC,Other molluscs and aquatic invertebrates,Other molluscs and aquatic invertebrates,Other,0.8,Molluscs,5
+CEFAS,European flat oyster,Oyster,Shellfish,0.3,Molluscs,5
+HMRC,Oyster,Oyster,Shellfish,0.3,Molluscs,5
+Norwegian_FC,"Oyster, common, raw",Oyster,Shellfish,1,Molluscs,5
+NDNS,OYSTERS RAW,Oyster,Shellfish,1,Molluscs,5
+CEFAS,Pacific cupped oyster,Oyster,Shellfish,0.3,Molluscs,5
+CEFAS,Great Atlantic scallop,Scallop,Shellfish,0.3,Molluscs,5
+CEFAS,Queen scallop,Scallop,Shellfish,0.3,Molluscs,5
+HMRC,Scallop,Scallop,Shellfish,0.3,Molluscs,5
+Norwegian_FC,"Scallop, raw",Scallop,Shellfish,1,Molluscs,5
+MMO,Scallops,Scallop,Shellfish,0.3,Molluscs,5
+NDNS,SCALLOPS STEAMED,Scallop,Shellfish,1,Molluscs,5
+NDNS,"Scallops, steamed",Scallop,Shellfish,1,Molluscs,5
+NDNS,"CALAMARI, COATED IN BATTER, BAKED",Squid,Other,1,Molluscs,5
+HMRC,Squid,Squid,Other,0.8,Molluscs,5
+NDNS,SQUID BOILED,Squid,Other,1,Molluscs,5
+NDNS,SQUID COATED FRIED IN BELENDED VEGETABLE OIL,Squid,Other,1,Molluscs,5
+NDNS,SQUID DRIED,Squid,Other,1,Molluscs,5
+NDNS,SQUID FRIED IN BLENDED VEGETABLE OIL,Squid,Other,1,Molluscs,5
+NDNS,"Squid ring (calamari) coated, fried",Squid,Other,1,Molluscs,5
+Norwegian_FC,"Squid, raw",Squid,Other,1,Molluscs,5
+HMRC,Squillid,Squillid,Shellfish,0.45,Molluscs,5
+HMRC,Whelk,Whelk,Shellfish,0.3,Molluscs,5
+MMO,Whelks,Whelk,Shellfish,0.3,Molluscs,5
+NDNS,WHELKS BOILED,Whelk,Shellfish,1,Molluscs,5
+Norwegian_FC,"Periwinkle, common, Norwegian",Winkle,Shellfish,1,Molluscs,5
+NDNS,WINKLES BOILED,Winkle,Shellfish,1,Molluscs,5
+HMRC,Other products,Other products,Other,1,Other,NA
+HMRC,Other unspecified products,Other products,Other,1,Other,NA
+DEFRA_household,118,Fish dish,Lean,1,Product,NA
+DEFRA_household,121,Fish dish,Lean,1,Product,NA
+DEFRA_household,12304,Fish dish,Lean,1,Product,NA
+DEFRA_household,12305,Fish dish,Lean,1,Product,NA
+NDNS,BIRDS EYE SEASIDE SHAPES,Fish dish,Lean,1,Product,NA
+NDNS,CAVIAR,Fish dish,Oily,1,Product,NA
+HMRC,"Caviar, livers and roes",Fish dish,Oily,1,Product,NA
+NDNS,Chinese fish balls,Fish dish,Lean,1,Product,NA
+NDNS,CHINESE FISH BALLS STEAMED,Fish dish,Lean,1,Product,NA
+NDNS,CODS ROES FRESH GRILLED,Fish dish,Oily,1,Product,NA
+NDNS,Crabstick / seafood stick,Fish dish,Lean,1,Product,NA
+NDNS,CRABSTICKS,Fish dish,Lean,1,Product,NA
+NDNS,CURRIED OILY FISH,Fish dish,Oily,1,Product,NA
+NDNS,CURRIED WHITE FISH,Fish dish,Lean,1,Product,NA
+DEFRA_eatenOut,eo1205,Fish dish,Lean,1,Product,NA
+DEFRA_eatenOut,eo120601,Fish dish,Lean,1,Product,NA
+DEFRA_eatenOut,eo120602,Fish dish,Lean,1,Product,NA
+DEFRA_eatenOut,eo120603,Fish dish,Lean,1,Product,NA
+NDNS,FISH AND SEAFOOD CHOWDER,Fish dish,Other,1,Product,NA
+NDNS,FISH CAKES IN BATTER GRILLED NO ADDED FAT,Fish dish,Lean,1,Product,NA
+NDNS,FISH CURRY,Fish dish,Other,1,Product,NA
+NDNS,FISH CURRY WITH ONION GARLIC AND WHITE FISH,Fish dish,Lean,1,Product,NA
+NDNS,Fish fillet in breadcrumbs/batter grilled or oven baked,Fish dish,Lean,1,Product,NA
+NDNS,"Fish fillet, breaded, in a bun (e.g. McDonald's Filet-O-Fish)",Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS COATED BATTER/BREADCRUMBS FRIED CCF,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS ECONOMY BATTER/BREADCRUMB GRILLED,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS ECONOMY BATTER/BREADCRUMB PUFA,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS ECONOMY BATTER/BREADCRUMB VEG OIL,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS FRIED IN BLENDED OIL,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS FRIED IN PUFA OIL,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS FRY BLENDED OIL,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS GRILLED,Fish dish,Lean,1,Product,NA
+NDNS,FISH FINGERS NOT ECONOMY FRIED IN OLIVE OIL,Fish dish,Lean,1,Product,NA
+NDNS,"FISH FINGERS, COD GRILLED/BAKED (NOT POLLOCK NOT SALMON)",Fish dish,Lean,1,Product,NA
+NDNS,"Fish fingers, fried",Fish dish,Lean,1,Product,NA
+NDNS,"Fish fingers, grilled or oven baked",Fish dish,Lean,1,Product,NA
+NDNS,"FISH FINGERS, SALMON, GRILLED/BAKED (NOT COD, NOT POLLACK)",Fish dish,Lean,1,Product,NA
+NDNS,FISH IN SAUCE,Fish dish,Other,1,Product,NA
+NDNS,FISH PASTE NOT SMOKED MACKEREL OR SMOKED TROUT PATE,Fish dish,Other,1,Product,NA
+NDNS,FISH PIE,Fish dish,Other,1,Product,NA
+NDNS,FISH PIE 1 CRUST FLAKY PASTRY,Fish dish,Other,1,Product,NA
+NDNS,FISH PIE WITH WHITE FISH POTATOES AND SAUCE,Fish dish,Other,1,Product,NA
+NDNS,"Fish pie, toddler meal (e.g. Little Dish, Annabel Karmel)",Fish dish,Other,1,Product,NA
+NDNS,Fish sandwich paste (e.g. salmon),Fish dish,Oily,1,Product,NA
+NDNS,"Fish shapes, white fish in breadcrumbs grilled",Fish dish,Lean,1,Product,NA
+NDNS,"FISH, WHITE, IN CHEESE AND SPINACH SAUCE, READY MEAL EG. SAINSBURY'S PLAICE FLORENTINE",Fish dish,Lean,1,Product,NA
+NDNS,Fish/seafood chowder,Fish dish,Other,1,Product,NA
+NDNS,FISHCAKE BATTER FRY COMM OIL,Fish dish,Lean,1,Product,NA
+NDNS,FISHCAKES BATTER FRY BLENDED,Fish dish,Lean,1,Product,NA
+NDNS,"Fishcakes coated in breadcrumb/batter, fried",Fish dish,Lean,1,Product,NA
+NDNS,"Fishcakes coated in breadcrumb/batter, grilled or oven baked",Fish dish,Lean,1,Product,NA
+NDNS,FISHCAKES COATED IN BREADCRUMBS GRILLED,Fish dish,Lean,1,Product,NA
+NDNS,FISHCAKES FRIED BLENDED OIL,Fish dish,Lean,1,Product,NA
+NDNS,FISHCAKES FROZEN,Fish dish,Lean,1,Product,NA
+NDNS,"FISHCAKES, WHITE FISH, COATED IN BREADCRUMBS BAKED/GRILLED",Fish dish,Lean,1,Product,NA
+NDNS,FISHERMAN'S PIE (WHITE FISH) RETAIL,Fish dish,Other,1,Product,NA
+NDNS,FISHERMANS PIE REDUCED CALORIE AND FAT RETAIL,Fish dish,Other,1,Product,NA
+NDNS,"Fisherman's pie, home made",Fish dish,Other,1,Product,NA
+NDNS,"Fishermans pie/ocean pie, ready meal",Fish dish,Other,1,Product,NA
+NDNS,KEDGEREE,Fish dish,Lean,1,Product,NA
+NDNS,MCDONALDS FILET O FISH (FISH IN A BUN),Fish dish,Lean,1,Product,NA
+NDNS,Mixed meat/seafood paella,Fish dish,Other,1,Product,NA
+NDNS,"PAELLA WITH CHICKEN, PRAWN AND CHORIZO PURCHASED",Fish dish,Other,1,Product,NA
+NDNS,ROE COD HARD BATTER FRY COMM,Fish dish,Oily,1,Product,NA
+NDNS,Salmon/tuna pate or mousse,Fish dish,Other,1,Product,NA
+NDNS,"SEAFOOD (MUSSELS, KING PRAWNS AND CALAMARI) IN TOMATO SAUCE",Fish dish,Other,1,Product,NA
+NDNS,Seafood (mussels/prawns/calamari) in tomato based sauce,Fish dish,Other,1,Product,NA
+NDNS,SEAFOOD COCKTAIL SANDWICH FILLER,Fish dish,Other,1,Product,NA
+NDNS,SEAFOOD PAELLA (NO RICE),Fish dish,Other,1,Product,NA
+NDNS,SEAFOOD PAELLA READY MEAL EG. M&S,Fish dish,Other,1,Product,NA
+NDNS,Seafood pasta,Fish dish,Other,1,Product,NA
+NDNS,SEAFOOD TAGLIATELLE,Fish dish,Other,1,Product,NA
+HMRC,Surimi,Fish dish,Lean,1,Product,NA
+NDNS,TARAMASALATA,Fish dish,Lean,1,Product,NA
+NDNS,"TEMPURA (PRAWNS, SOLE, COLEY AND HADDOCK IN BATTER) FROM A RESTAURANT.",Fish dish,Other,1,Product,NA
+NDNS,Tempura battered white fish and prawns,Fish dish,Other,1,Product,NA
+NDNS,VESTA PAELLA AS SERVED,Fish dish,Other,1,Product,NA
+NDNS,White fish in a cheese sauce (with or without vegetables),Fish dish,Lean,1,Product,NA
+NDNS,WHITE FISH IN CHEESE SAUCE,Fish dish,Lean,1,Product,NA
+HMRC,Fish oil,Fish oil,Other non-food use,1,Remove,NA
+HMRC,Fishmeal,Fishmeal,Other non-food use,1,Remove,NA
+HMRC,Other non-food use,Other non-food use,Other non-food use,1,Remove,NA
+HMRC,Seaweed and other algae,Seaweed and other algae,Seaweed and other algae,1,Remove,NA
