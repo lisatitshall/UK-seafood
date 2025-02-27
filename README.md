@@ -6,7 +6,7 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
 ### Data Notes
 - Fisheries means fishing from the natural environment and aquaculture is harvesting/farming fish.
 - Consumer demand is higher for the "big five": cod, haddock, tuna, salmon and prawns.
-- SACN stands for Scientific Advisory Committee on Nutrition. Other includes ready meals and fish such as octopus which are molluscs in the other species list.
+- SACN stands for Scientific Advisory Committee on Nutrition. "Other" category includes ready meals and fish such as octopus which are molluscs in the ISSCAAP list.
 - ISSCAAP stands for International Standard Statistical Classification of Aquatic Animals and Plants. They have a "Remove" category which might need to be removed depending on how we use SeafoodMatchingList.csv. Diadromous fish migrate between salt water and fresh water. Marine fish live in salt water. Products are ready meals containing fish.
 - ISSCAAP Other, Remove and Product categories had NA as code. I changed this to null. 
 
