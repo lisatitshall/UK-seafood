@@ -1,4 +1,4 @@
-Species,CalendarYear,SpeciesType,SACN,Imports,Exports,Consumption,Production,Purchases,UKPOP,Protein_g100g,Omega3_DHAEPA_g100g,VitaminA_µg100g,VitaminD_µg100g,VitaminB12_µg100g,Zinc_mg100g,Iron_mg100g,Calcium_mg100g,Selenium_µg100g,Iodine_µg100g
+Species,CalendarYear,SpeciesType,SACN,Imports,Exports,Consumption,Production,Purchases,UKPOP,Protein_g100g,Omega3_DHAEPA_g100g,VitaminA_Ä¾g100g,VitaminD_Ä¾g100g,VitaminB12_Ä¾g100g,Zinc_mg100g,Iron_mg100g,Calcium_mg100g,Selenium_Ä¾g100g,Iodine_Ä¾g100g
 Char,2018,Freshwater,Oily,NA,NA,NA,2614400,NA,66435600,16.1,1.06,30,6.9,10,0.4,0.2,16,30,20
 Char,2013,Freshwater,Oily,NA,NA,NA,4912750,NA,64105700,16.1,1.06,30,6.9,10,0.4,0.2,16,30,20
 Char,2016,Freshwater,Oily,NA,NA,NA,7189600,NA,65648100,16.1,1.06,30,6.9,10,0.4,0.2,16,30,20
