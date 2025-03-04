@@ -7,6 +7,7 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
 - Import csv files into Power BI.
 - Use Power Query Editor to explore and transform data. See [detailed steps](#data-transformation).
 - Check the relationships in the Model view.
+- Initial exploratory data analysis to understand the data and identify points to investigate. 
 
 ### Things to Investigate
 - Look at totals of all fields
@@ -58,7 +59,12 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
    - MMO provide production data for fisheries
    - CEFAS provide production data for aquaculture
    - NDNS provide consumption data
-   - DEFRA provide purchases data (both home and eating out)
+   - DEFRA provide purchases data (both home and eating out). They only provide data on:
+     - Fish dish (product / lean)
+     - Herring (marine / oily)
+     - Other marine fish (marine / lean and oily)
+     - Other molluscs (molluscs / shellfish)
+     - Salmon (diadromous / oily)
 
 ### Data Notes
 - Fisheries means fishing from the natural environment and aquaculture is harvesting/farming fish.
