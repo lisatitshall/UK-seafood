@@ -11,7 +11,7 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
 
 ### Things to Investigate
 - Look at totals of all fields
-  - Over all years: imports 8tn, production fisheries 3.5tn, production aquaculture 1tn, home purchases 6tn, exports 5.5tn, consumption 5tn,  purchases out 0.5tn. Producing 4.5tn vs exporting 5.5tn, suggests we're exporting most of what we're producing. Could also be value add on imports. 
+  - Over all years: imports 9tn, production fisheries 3.5tn, production aquaculture 1tn, home purchases 6tn, exports 5.5tn, consumption 5tn,  purchases out 0.5tn. Producing 4.5tn vs exporting 5.5tn, suggests we're exporting most of what we're producing. Could also be value add on imports. 
 - Look at how each field has changed over time
   - Imports from 765bn to 715bn (sharp decrease between 2013-15 and then again 2016-18)
   - Aquaculture production from 90bn to 105bn (slow increase with ups and downs)
@@ -20,25 +20,31 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
   - Out purchases slow but steady increase from 44bn to 57bn
   - Exports from 470bn to 420bn (ups and downs, could be related to production/weather)
   - Consumption from 380bn to 480bn (sharp increase between 2019 and 2020, slow increase rest of time)
-  - Look at percentages for this but initially looks like imports are decreasing as consumption is increasing
 - How many species do we have data for? How many species do we have all fields for?
-  - 73 unique species. Only "Other marine fish" has data for all fields
-  - If we look for one non-null production value and one non-null consumption value we only get 8 species in all years that don't have this data: brill, char, gurnard, lemon sole, pilchard, sand eel, whelk and witch. So 65 species have production/consumption data for at least one year. 
+  - 79 unique species. No species have data for all fields. 
+  - If we look for one non-null production value and one non-null consumption value we only get 8 species in all years that don't have this data: brill, char, gurnard, lemon sole, pilchard, sand eel, whelk and witch (plus the new detailed species we created e.g. fish dish other). So most species have production/consumption data for at least one year. 
 - Has species data changed over time? Could the Brexit deal be affecting some of this?
   - Aquaculture of shellfish/molluscs has halved between 2009 and 2020. A lot of this is due to mussel production. 
   - Consumption of fish products more than doubled between 2019 and 2020 (home/out purchases didn't show the same trend)
 - For consumption / purchases how many grams per person? Does the NHS make recommendations about quantities of fish?
+  - Consumption per person is around 117g and doesn't change much over the years except for an increase in 2020. However, the population number would include adults and children. The NHS suggest we should have 2 portions of fish a week totalling 280g. Purchases per person is around 160g and also doesn't change much over the years. 
 - How much of our consumption is of the big five fish? Has this changed over time?
-- How much of our consumption is of fish products rather than whole fish? Note: ISSCAAP Product includes ready meals, caviar, dips, pastes, fishcakes and fish in sauce. 
+  - Over all years we've consumed 3128bn grams of the big five and about half as much of other fish (1605bn)
+  - About two thirds and hasn't changed much over time. Did in 2020 but this was due to more consumption of fish dishes.
+- How much of our consumption is of fish products rather than whole fish? Note: ISSCAAP Product includes ready meals, caviar, dips, pastes, fishcakes and fish in sauce.
+  - About 12% of consumption is fish products except for in 2020 when it was 27%. 
 - How much of the big five are we importing? What other fish are we exporting and in what quantities?
+  - About two thirds of the fish we import is of the big five. 
 - Where are the biggest differences between what we produce and consume?
-  - Overall, we're purchasing more than we produce (the same doesn't apply for consumption)
-  - We're purchasing/consuming more lean fish than we're producing
-  - Big discrepancies between consumption/production values for different fish species. Need to investigate this and why it might be happening. One notable is lack of purchase date for shellfish/crustaceans. 
+  - Overall, we're purchasing more than we produce (consumption figures are the same as production)
+  - We're purchasing/consuming more lean fish than we're producing and purchasing/consuming less shellfish and oily fish than we're producing
 - Is there a difference between the fish being consumed within / outside the home?
 - Does the data mention where products are being imported from?
+  - No
 - Is there any data on fish stocks / sustainable fishing?
+  - Not here, would need to get this elsewhere
 - Is there any data on carbon emissions of producing and trading fish?
+  - Not here, would need to get this elsewhere
 - Would it be possible to compare this data with another country?
  
 ### Data Transformation
