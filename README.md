@@ -27,7 +27,7 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
   - Aquaculture of shellfish/molluscs has halved between 2009 and 2020. A lot of this is due to mussel production. 
   - Consumption of fish products more than doubled between 2019 and 2020 (home/out purchases didn't show the same trend)
 - For consumption / purchases how many grams per person? Does the NHS make recommendations about quantities of fish?
-  - Consumption per person is around 117g and doesn't change much over the years except for an increase in 2020. However, the population number would include adults and children. The NHS suggest we should have 2 portions of fish a week totalling 280g. Purchases per person is around 160g and also doesn't change much over the years. 
+  - Consumption per person is around 117g and doesn't change much over the years except for an increase in 2020. However, the population number would include adults and children. The NHS suggest we should have 2 portions of fish a week totalling 280g. Purchases per person is around 160g and also doesn't change much over the years. Would need to try and get population breakdown by age and understand if NHS have fish nutrition guidance for the same age groups. Then we'd be comparing the actual consumption to what we'd expect if everyone was eating the proportion they should be. 
 - How much of our consumption is of the big five fish? Has this changed over time?
   - Over all years we've consumed 3128bn grams of the big five and about half as much of other fish (1605bn)
   - About two thirds and hasn't changed much over time. Did in 2020 but this was due to more consumption of fish dishes.
