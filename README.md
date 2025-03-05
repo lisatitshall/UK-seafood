@@ -46,11 +46,10 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
 - Removed Units and TemporalResolution columns from SupplyChain because they always have the same value. Renamed Volume as VolumeGrams.
 - For numerical columns changed NA to null and changed the column type to whole number or decimal as appropriate. 
 - Checked that all year/population combinations from SupplyComposition were the same. Created a UKPopulation table with year and population and removed population from SupplyComposition. 
-- Checked that all species/nutritional information columns were the same. Created a FishNutrition table which lists nutritional information e.g. protein per 100g and removed these columns from SupplyComposition. 
-- Created a FishTypes table which lists the fish categories as designated by the SACN and ISSCAAP. Removed these columns from SupplyComposition.
+- Checked that all species/nutritional information columns were the same. Created a FishNutrition table which lists nutritional information e.g. protein per 100g and removed these columns from SupplyComposition.
+- From SeafoodMatchingList I created a FishTypesCFValues table to list fish species, their categories as designated by the SACN and ISSCAAP and the CF value for different data suppliers. Some of the species had trailing spaces so these were removed using the Trim option. A few species had their name changed in a custom column to be more specific e.g. "fish dish" was changed to "fish dish other", "fish dish oily" or "fish dish lean" depending on the SACN type. Supplier was used as a pivot column to get one row per species and the different CF values by supplier (removing any suppliers which weren't in SupplyChain). 
 - The remaining columns in SupplyComposition added up the values in SupplyChain but not for all fish species. To double check that the amounts added up correctly I grouped a duplicate of SupplyComposition by commodity, species and year then used commodity as a pivot column to widen the table. There was only one value which didn't match due to more significant figures in one dataset (the salmon production values for 2019). 
 - Deleted SupplyComposition because it no longer contained any different information from SupplyChain.
-- In SeafoodMatchingList the only remaining useful information was the CF value. Distinct data supplier, species and CF values were kept. Some of the species had trailing spaces so these were removed using the Trim option. There was one supplier/species combination (HMRC/Other marine fish) which had 4 CF values so the supplier/species were grouped and the average CF value calculated. Supplier was used as a pivot column to get one row per species and the different CF values by supplier (removing any suppliers which weren't in SupplyChain). 
 - A conditional column, DataSupplierDetail, was created to split out DEFRA into DEFRA_eatenOut and DEFRA_household. 
 - Created a Conditional Column for Commodity Detail. This was to split Production into ProductionFisheries and ProductionAquaculture and Purchases into PurchasesHome and PurchasesOut. 
 - Created a DataSources table which lists the dataset information. Removed these columns from SupplyChain.
@@ -59,12 +58,7 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
    - MMO provide production data for fisheries
    - CEFAS provide production data for aquaculture
    - NDNS provide consumption data
-   - DEFRA provide purchases data (both home and eating out). They only provide data on:
-     - Fish dish (product / lean)
-     - Herring (marine / oily)
-     - Other marine fish (marine / lean and oily)
-     - Other molluscs (molluscs / shellfish)
-     - Salmon (diadromous / oily)
+   - DEFRA provide purchases data (both home and eating out). They only provide data on five fish types: "fish dish", "herring", "other marine fish", "other molluscs" and "salmon"
 
 ### Data Notes
 - Fisheries means fishing from the natural environment and aquaculture is harvesting/farming fish.
