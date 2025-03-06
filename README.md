@@ -7,12 +7,14 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
 - Import csv files into Power BI.
 - Use Power Query Editor to explore and transform data. See [detailed steps](#data-transformation).
 - Check the relationships in the Model view.
-- Initial exploratory data analysis to understand the data and identify points to investigate. 
+- Initial exploratory data analysis to understand the data and identify points to investigate.
+- Review findings to extract key themes. 
 
 ## Key Themes
-### [1] Two thirds of our fish consumption is of the big five fish
+### [1] Two thirds of our fish consumption is of the "big five" fish
+- The big five fish are salmon, tuna, cod, prawn and haddock. 
 - Between 2009 and 2020 we've consumed 4.7 trillion grams of fish, 3.1 trillion grams of the big five fish (~66%) and 1.6 trillion grams of all other fish. The percentage hasn't changed much over the years. 
-- Almost 1 trillion grams is of salmon consumption alone.
+- Salmon consumption alone is almost 1 trillion grams.
 - Production is the other way round. We produce roughly 1/3 of the big five fish and 2/3 of other fish.
 - Roughly 12% of consumption is due to eating fish products instead of whole fish e.g. ready meals, fishcakes and pastes. 
 
