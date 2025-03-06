@@ -12,23 +12,22 @@ Use Power BI to explore UK seafood data retrieved from [UK Data Service](https:/
 
 ## Key Themes
 ### [1] Two thirds of our fish consumption is of the "big five" fish
-- The big five fish are salmon, tuna, cod, prawn and haddock. 
+- The big five fish are salmon, tuna, cod, prawn, and haddock. 
 - Between 2009 and 2020 we've consumed 4.7 trillion grams of fish, 3.1 trillion grams of the big five fish (~66%) and 1.6 trillion grams of all other fish. The percentage hasn't changed much over the years. 
 - Salmon consumption alone is almost 1 trillion grams.
 - Production is the other way round. We produce roughly 1/3 of the big five fish and 2/3 of other fish.
-- Roughly 12% of consumption is due to eating fish products instead of whole fish e.g. ready meals, fishcakes and pastes. 
+- Three of the five most produced fish are underconsumed - mackerel, herring and crab.  
 
 ### [2] Production has remained relatively stable with a few notable exceptions
 - Aquaculture production has increased from 90bn to 105bn between 2009 and 2020 with some sharp ups and downs. Most of the increase can be explained by an increase in salmon production.
 - Aquaculture production of shellfish/molluscs has halved between 2009 and 2020. This is due to a decrease in mussel production. 
-- Fisheries production has remained relatively steady over the same period although there was a big spike in 2014. We produce mackerel and herring much more than any other fish and this accounts for the spikes observed. 
+- Fisheries production has remained relatively steady over the same period although there was a big spike in 2014. We produce more mackerel and herring than any other fish and this accounts for the spikes observed. 
 
 ### [3] The gap between production and consumption is being filled by imports
 - We consume roughly double the amount of lean fish that we produce and only consume about 60% of the shellfish we produce.
 - 80% of lean fish imports/production consists of imports.
-- Consumption of fish dish products spiked in 2020.
 - Between 2009 and 2020 there has been a slow decrease in the consumption of marine fish and a slow increase in the consumption of diadromous fish. This can be explained by an increase in salmon consumption and reductions in cod and haddock consumption. 
-
+- Consumption of fish dish products spiked in 2020.
  
 ### Data Transformation
 - ISSCAAP Other, Remove and Product categories had NA as code. I changed this to null.
