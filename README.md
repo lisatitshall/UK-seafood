@@ -61,6 +61,14 @@ Supplementary data for the EU was retrieved from EUMOFA (European Market Observa
    - CEFAS provide production data for aquaculture
    - NDNS provide consumption data
    - DEFRA provide purchases data (both home and eating out). They only provide data on five fish types: "fish dish", "herring", "other marine fish", "other molluscs" and "salmon"
+- Transformation steps for EUMOFA data:
+  - Multiplied volume column by 1000 to change from kilograms to grams. 
+  - Removed weight column because it always says net weight. Renamed volume column to NetWeightGrams.
+  - Removed EU value because we haven't been considering monetary value and MCS column because it categorizes fish in different ways. 
+  - Checked that CG values (species names) were unique.
+  - Merged CG values with FishTypes table to see which ones matched. Changed the names of non-matching ones when absolutely sure they were referring to the same thing.
+  - Grouped the data to retrieve the yearly consumption data instead of monthly. Did some spot checks to ensure the totals matched the original dataset.
+  - Added the new connection between EUConsumption and FishTypes table in the Model view. 
 
 ### Data Notes
 - Fisheries means fishing from the natural environment and aquaculture is harvesting/farming fish.
@@ -69,4 +77,8 @@ Supplementary data for the EU was retrieved from EUMOFA (European Market Observa
 - ISSCAAP stands for International Standard Statistical Classification of Aquatic Animals and Plants. Diadromous fish migrate between salt water and fresh water. Marine fish live in salt water. Products are ready meals containing fish.
 - The supply chain dataset includes data on imports, exports, production, consumption and purchases.
 - Note the two conversions in the supply chain dataset. V1 says conversion factors were applied to all or part of the import/export data (the edible portion of fish). V2 says grams per capita per week were converted to grams per country per year (purchases/consumption data). The CF value (conversion factor) was found in SeafoodMatchingList.
-- The NHS recommend people eat at least 2 portions (280g) of fish per week including one portion of oily fish. This applies to all ages except children under 2. 
+- The NHS recommend people eat at least 2 portions (280g) of fish per week including one portion of oily fish. This applies to all ages except children under 2.
+- Notes about EUMOFA data:
+  - Monthly consumption data are provided by national sources or private providers.
+  - A lot of countries are covered by Europanel data e.g. France, Germany, Ireland, Netherlands, Denmark etc. In this case an adequate sample size has been chosen to be representative of the population.
+  - Only selected fish species are included and this varies by country. 
