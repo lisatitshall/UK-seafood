@@ -3,7 +3,7 @@
 ## Summary 
 Use Power BI to explore UK seafood data retrieved from [UK Data Service](https://reshare.ukdataservice.ac.uk/856955/). The data includes information about what's being produced, imported, exported, purchased, and consumed. 
 
-Supplementary data for the EU was retrieved from EUMOFA (European Market Observatory for Fisheries and Aquaculture Products) and Eurostat. 
+Supplementary data for the EU was retrieved from [EUMOFA](https://eumofa.eu/data) (European Market Observatory for Fisheries and Aquaculture Products) and [Eurostat](https://ec.europa.eu/eurostat/databrowser/view/fish_ld_main/default/table?lang=en&category=fish.fish_ld). EU Population figures were retrieved from the [World Bank.](https://data.worldbank.org/indicator/SP.POP.TOTL) 
 
 ## Steps taken
 - Import csv files into Power BI.
@@ -11,7 +11,7 @@ Supplementary data for the EU was retrieved from EUMOFA (European Market Observa
 - Check the relationships in the Model view.
 - Initial exploratory data analysis to understand the data and identify points to investigate.
 - Review findings to extract key themes.
-- Research sources of EU data for comparison purposes. 
+- Research sources of EU data for comparison purposes. Import these into Power BI and transform as needed.
 
 ## Key Themes
 ### [1] Two thirds of our fish consumption is of the "big five" fish
@@ -68,7 +68,13 @@ Supplementary data for the EU was retrieved from EUMOFA (European Market Observa
   - Checked that CG values (species names) were unique.
   - Merged CG values with FishTypes table to see which ones matched. Changed the names of non-matching ones when absolutely sure they were referring to the same thing.
   - Grouped the data to retrieve the yearly consumption data instead of monthly. Did some spot checks to ensure the totals matched the original dataset.
-  - Added the new connection between EUConsumption and FishTypes table in the Model view. 
+  - Added the new connection between EUConsumption and FishTypes table in the Model view.
+- Transformation of World Bank data (due to size, required EU countries were chosen before importing into Power BI):
+  - Use first row as headers.
+  - Removed country code, indicator name, indicator code and years between 1960 and 2008.
+  - Unpivoted by year to get a longer table instead of a wide one.
+  - Pivoted by country name to get one row for each year and a column for each country.
+  - Merged the EU populations into the existing UKPopulation table and renamed the table Populations. 
 
 ### Data Notes
 - Fisheries means fishing from the natural environment and aquaculture is harvesting/farming fish.
