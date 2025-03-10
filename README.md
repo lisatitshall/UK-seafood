@@ -12,6 +12,7 @@ Supplementary data for the EU was retrieved from [EUMOFA](https://eumofa.eu/data
 - Initial exploratory data analysis to understand the data and identify points to investigate.
 - Review findings to extract key themes.
 - Research sources of EU data for comparison purposes. Import these into Power BI and transform as needed.
+- Create calculated columns, measures and visualizations to present the key findings. 
 
 ## Key Themes
 ### [1] Two thirds of our fish consumption is of the "big five" fish
