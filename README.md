@@ -53,7 +53,8 @@ Supplementary data for the EU was retrieved from [EUMOFA](https://eumofa.eu/data
 - For numerical columns changed NA to null and changed the column type to whole number or decimal as appropriate. 
 - Checked that all year/population combinations from SupplyComposition were the same. Created a UKPopulation table with year and population and removed population from SupplyComposition. 
 - Checked that all species/nutritional information columns were the same. Created a FishNutrition table which lists nutritional information e.g. protein per 100g and removed these columns from SupplyComposition.
-- From SeafoodMatchingList I created a FishTypesCFValues table to list fish species, their categories as designated by the SACN and ISSCAAP and the CF value for different data suppliers. Some of the species had trailing spaces so these were removed using the Trim option. A few species had their name changed in a custom column to be more specific e.g. "fish dish" was changed to "fish dish other", "fish dish oily" or "fish dish lean" depending on the SACN type. Supplier was used as a pivot column to get one row per species and the different CF values by supplier (removing any suppliers which weren't in SupplyChain). 
+- From SeafoodMatchingList I created a FishTypesCFValues table to list fish species, their categories as designated by the SACN and ISSCAAP and the CF value for different data suppliers. Some of the species had trailing spaces so these were removed using the Trim option. A few species had their name changed in a custom column to be more specific e.g. "fish dish" was changed to "fish dish other", "fish dish oily" or "fish dish lean" depending on the SACN type. Supplier was used as a pivot column to get one row per species and the different CF values by supplier (removing any suppliers which weren't in SupplyChain).
+- Merged FishNutrition and FishTypesCFValues for a star schema
 - The remaining columns in SupplyComposition added up the values in SupplyChain but not for all fish species. To double check that the amounts added up correctly I grouped a duplicate of SupplyComposition by commodity, species and year then used commodity as a pivot column to widen the table. There was only one value which didn't match due to more significant figures in one dataset (the salmon production values for 2019). 
 - Deleted SupplyComposition because it no longer contained any different information from SupplyChain.
 - A conditional column, DataSupplierDetail, was created to split out DEFRA into DEFRA_eatenOut and DEFRA_household. 
@@ -72,7 +73,13 @@ Supplementary data for the EU was retrieved from [EUMOFA](https://eumofa.eu/data
   - Checked that CG values (species names) were unique.
   - Merged CG values with FishTypes table to see which ones matched. Changed the names of non-matching ones when absolutely sure they were referring to the same thing.
   - Grouped the data to retrieve the yearly consumption data instead of monthly. Did some spot checks to ensure the totals matched the original dataset.
-  - Added the new connection between EUConsumption and FishTypes table in the Model view.
+  - The next aim was to add the EU data to SupplyChain for a star schema. The following steps were taken:
+    - Created new table of species that didn't match FishTypes table and appended to FishTypes
+    - Merged on year and fish species to add EU columns to SupplyChain
+    - Created a duplicate of EUMOFA data and filtered to keep missing fish species
+    - Append missing fish data to SupplyChain
+    - Rename columns relating to the UK so it's clear they contain UK data
+    - Hide unnecessary tables from report view
 - Transformation of World Bank data (due to size, required EU countries were chosen before importing into Power BI):
   - Use first row as headers.
   - Removed country code, indicator name, indicator code and years between 1960 and 2008.
