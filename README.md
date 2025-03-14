@@ -42,10 +42,10 @@ Supplementary data for the EU was retrieved from [EUMOFA](https://eumofa.eu/data
 ### [4] UK fish consumption is much lower than the NHS recommend
 - In 2020 the UK consumed 476bn grams of fish, roughly half what the NHS recommends (977bn). Note: the 977bn is based on population and is slightly inflated because children under 2 have different dietary requirements.
 - Consumption remained steady between 2009 and 2019 with a slight improvement in 2020.
-- In 2020 the average person consumed 136g of all fish a week and 64g of oily fish. This compares to recommendations of 280g and 140g respectively.
+- In 2020 the average person consumed 136g of all fish a week and 64g of oily fish. This compares to recommendations of 280g and 140g respectively. The buttons on the chart switch the view between all fish and oily fish. 
 - Despite the UK's poor fish consumption it still performs better than most EU countries (except Spain which consumes roughly double the amount of fish per person per week). Note: the EU graph only includes a few countries for easier comparison, countries which overlapped have been removed.
 
-![image](https://github.com/user-attachments/assets/c012e664-5862-4808-a805-0bc4ccaf5de9)
+![image](https://github.com/user-attachments/assets/a461859e-cf44-44ca-ad6a-61f8c409d1e5)
 
 ### Data Transformation
 - ISSCAAP Other, Remove and Product categories had NA as code. I changed this to null.
