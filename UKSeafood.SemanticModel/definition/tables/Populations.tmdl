@@ -1,0 +1,157 @@
+table Populations
+	lineageTag: 1b586dea-b9b2-4cc1-9d5d-d6232e0f1731
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 3713b348-07cb-4e04-b86a-7c494d64d69f
+		summarizeBy: none
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column UK
+		dataType: int64
+		formatString: 0
+		lineageTag: 5624e55c-ed98-457d-a0f6-b37341247a51
+		summarizeBy: none
+		sourceColumn: UK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Germany
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d464d0a-d7bd-478e-b8a1-fbe9d0363878
+		summarizeBy: none
+		sourceColumn: Germany
+
+		annotation SummarizationSetBy = Automatic
+
+	column Denmark
+		dataType: int64
+		formatString: 0
+		lineageTag: 092e4a39-4529-4044-a82d-2e923699f937
+		summarizeBy: none
+		sourceColumn: Denmark
+
+		annotation SummarizationSetBy = Automatic
+
+	column Spain
+		dataType: int64
+		formatString: 0
+		lineageTag: 71c52d7e-40cc-424e-852a-89d6c87f2823
+		summarizeBy: none
+		sourceColumn: Spain
+
+		annotation SummarizationSetBy = Automatic
+
+	column France
+		dataType: int64
+		formatString: 0
+		lineageTag: baef4da8-7552-4976-9aaf-3a02da01f0dd
+		summarizeBy: none
+		sourceColumn: France
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hungary
+		dataType: int64
+		formatString: 0
+		lineageTag: 46332a70-33a9-4861-915e-a736287bb7f5
+		summarizeBy: none
+		sourceColumn: Hungary
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ireland
+		dataType: int64
+		formatString: 0
+		lineageTag: f78e86ed-9cda-4737-a0aa-5eb94cba3309
+		summarizeBy: none
+		sourceColumn: Ireland
+
+		annotation SummarizationSetBy = Automatic
+
+	column Italy
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a800490-2d96-4f61-a978-a503080d7051
+		summarizeBy: none
+		sourceColumn: Italy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Netherlands
+		dataType: int64
+		formatString: 0
+		lineageTag: c9cb0837-ede7-49c0-a1d9-c5b08de93301
+		summarizeBy: none
+		sourceColumn: Netherlands
+
+		annotation SummarizationSetBy = Automatic
+
+	column Poland
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f541ad1-a351-4144-ad93-1f12ecca355c
+		summarizeBy: none
+		sourceColumn: Poland
+
+		annotation SummarizationSetBy = Automatic
+
+	column Portugal
+		dataType: int64
+		formatString: 0
+		lineageTag: eaa0998c-0bfb-4dd3-97d2-3e5661115b7b
+		summarizeBy: none
+		sourceColumn: Portugal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sweden
+		dataType: int64
+		formatString: 0
+		lineageTag: 03b5be8b-1b80-4c2c-9e2a-23a698b92f5f
+		summarizeBy: none
+		sourceColumn: Sweden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Populations = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\UKSeafoodSupplyComposition.csv"),[Delimiter=",", Columns=20, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"Species", type text}, {"CalendarYear", Int64.Type}, {"SpeciesType", type text}, {"SACN", type text}, {"Imports", type text}, {"Exports", type text}, {"Consumption", type text}, {"Production", type text}, {"Purchases", type text}, {"UKPOP", Int64.Type}, {"Protein_g100g", type number}, {"Omega3_DHAEPA_g100g", type number}, {"VitaminA_µg100g", type text}, {"VitaminD_µg100g", type text}, {"VitaminB12_µg100g", type number}, {"Zinc_mg100g", type number}, {"Iron_mg100g", type number}, {"Calcium_mg100g", Int64.Type}, {"Selenium_µg100g", Int64.Type}, {"Iodine_µg100g", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"Imports"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Imports", Int64.Type}}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Changed Type","NA","",Replacer.ReplaceText,{"Exports"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value1",{{"Exports", Int64.Type}}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Changed Type1","NA","",Replacer.ReplaceText,{"Consumption"}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Replaced Value2",{{"Consumption", Int64.Type}}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Changed Type3","NA","",Replacer.ReplaceText,{"Production"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Replaced Value3",{{"Production", Int64.Type}}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Changed Type2","NA","",Replacer.ReplaceText,{"Purchases"}),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Replaced Value4",{{"Purchases", Int64.Type}}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Changed Type4","NA","",Replacer.ReplaceText,{"VitaminA_µg100g"}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Replaced Value5",{{"VitaminA_µg100g", Int64.Type}}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Changed Type5","NA","",Replacer.ReplaceText,{"VitaminD_µg100g"}),
+				    #"Changed Type6" = Table.TransformColumnTypes(#"Replaced Value6",{{"VitaminD_µg100g", type number}}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Changed Type6","NA","",Replacer.ReplaceText,{"Iodine_µg100g"}),
+				    #"Changed Type7" = Table.TransformColumnTypes(#"Replaced Value7",{{"Iodine_µg100g", Int64.Type}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type7",{"UKPOP", "CalendarYear"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns", {"UKPOP"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Duplicates",{"CalendarYear", "UKPOP"}),
+				    #"Sorted Rows" = Table.Sort(#"Reordered Columns",{{"CalendarYear", Order.Ascending}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Sorted Rows", {"CalendarYear"}, EUPopulation, {"Attribute"}, "EUPopulation", JoinKind.LeftOuter),
+				    #"Expanded EUPopulation" = Table.ExpandTableColumn(#"Merged Queries", "EUPopulation", {"Germany", "Denmark", "Spain", "France", "Hungary", "Ireland", "Italy", "Netherlands", "Poland", "Portugal", "Sweden"}, {"Germany", "Denmark", "Spain", "France", "Hungary", "Ireland", "Italy", "Netherlands", "Poland", "Portugal", "Sweden"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded EUPopulation",{{"UKPOP", "UK"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,227 @@
+table FishTypesCFValues
+	lineageTag: a31c7b32-cca4-4c75-8084-1397a34b7ec3
+
+	column CommonSpeciesName
+		dataType: string
+		lineageTag: 9908891e-722e-4dbb-a3f5-c9c3a4fd8ea5
+		summarizeBy: none
+		sourceColumn: CommonSpeciesName
+
+		annotation SummarizationSetBy = Automatic
+
+	column HMRC
+		dataType: double
+		lineageTag: 70dbbf40-f8fd-4594-a8a2-69f8708b30cb
+		summarizeBy: none
+		sourceColumn: HMRC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NDNS
+		dataType: double
+		lineageTag: 6ad1aaf8-20f5-4ee6-9451-25280a74a24d
+		summarizeBy: none
+		sourceColumn: NDNS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MMO
+		dataType: double
+		lineageTag: ea599b2e-a150-4e0f-8e6d-2e1ab8a4efb3
+		summarizeBy: none
+		sourceColumn: MMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DEFRA_household
+		dataType: double
+		lineageTag: 7117e3f6-4123-4ef2-8c02-85f7d112244b
+		summarizeBy: none
+		sourceColumn: DEFRA_household
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CEFAS
+		dataType: double
+		lineageTag: e77004ec-c841-487c-8b74-42382cff414d
+		summarizeBy: none
+		sourceColumn: CEFAS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DEFRA_eatenOut
+		dataType: double
+		lineageTag: 894b5bca-611a-4aa4-aaa5-797743da82fe
+		summarizeBy: none
+		sourceColumn: DEFRA_eatenOut
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CommonSpeciesNameDetail
+		dataType: string
+		lineageTag: e1b7f8c6-1665-491c-91e3-3cade4f890ee
+		summarizeBy: none
+		sourceColumn: CommonSpeciesNameDetail
+
+		annotation SummarizationSetBy = Automatic
+
+	column SACN_Desc
+		dataType: string
+		lineageTag: d9a31c26-a77d-4089-b689-4b27bff50ad0
+		summarizeBy: none
+		sourceColumn: SACN_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISSCAAP_Desc
+		dataType: string
+		lineageTag: c8dca061-d998-48ee-93f7-07656fce5527
+		summarizeBy: none
+		sourceColumn: ISSCAAP_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column Protein_g100g
+		dataType: double
+		lineageTag: e5ab1d2c-f8e4-4663-881f-d830c8aeb930
+		summarizeBy: none
+		sourceColumn: Protein_g100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Omega3_DHAEPA_g100g
+		dataType: double
+		lineageTag: 2ec9fadd-5bcd-41b5-87eb-260b3105c467
+		summarizeBy: none
+		sourceColumn: Omega3_DHAEPA_g100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VitaminA_µg100g
+		dataType: int64
+		formatString: 0
+		lineageTag: ccb7f0b7-d8e5-4248-b899-5b1216cdf3c5
+		summarizeBy: none
+		sourceColumn: VitaminA_µg100g
+
+		annotation SummarizationSetBy = Automatic
+
+	column VitaminD_µg100g
+		dataType: double
+		lineageTag: 3aeff8d2-6507-4a11-a4df-e0e7dadb48ea
+		summarizeBy: none
+		sourceColumn: VitaminD_µg100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VitaminB12_µg100g
+		dataType: double
+		lineageTag: 5ba1e71c-5d95-4a4d-8bd1-554810c40b48
+		summarizeBy: none
+		sourceColumn: VitaminB12_µg100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Zinc_mg100g
+		dataType: double
+		lineageTag: 083ca9ab-5bfb-40c4-902e-0df2e84927a3
+		summarizeBy: none
+		sourceColumn: Zinc_mg100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Iron_mg100g
+		dataType: double
+		lineageTag: ceab9d4c-b687-4d9d-bc52-2568db7c3818
+		summarizeBy: none
+		sourceColumn: Iron_mg100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Calcium_mg100g
+		dataType: int64
+		formatString: 0
+		lineageTag: 135ad325-aeb8-4707-bcbd-658d2f5c8de9
+		summarizeBy: none
+		sourceColumn: Calcium_mg100g
+
+		annotation SummarizationSetBy = Automatic
+
+	column Selenium_µg100g
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d449113-4422-4f06-aa21-63af3cef681c
+		summarizeBy: none
+		sourceColumn: Selenium_µg100g
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iodine_µg100g
+		dataType: int64
+		formatString: 0
+		lineageTag: 69a8cf16-0d25-41f6-850b-f09c3d12e753
+		summarizeBy: none
+		sourceColumn: Iodine_µg100g
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FishTypesCFValues = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\SeafoodMatchingList.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"UniqueSeafoodSpecies", type text}, {"CommonSpeciesName", type text}, {"SACN_Desc", type text}, {"CFValue", type number}, {"ISSCAAP_Desc", type text}, {"ISSCAAP_Code", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"ISSCAAP_Code"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Replaced Value",{{"CommonSpeciesName", Text.Trim, type text}, {"SACN_Desc", Text.Trim, type text}, {"ISSCAAP_Desc", Text.Trim, type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Trimmed Text", "CommonSpeciesNameDetail", each
+				if [CommonSpeciesName] = "Fish dish" and [SACN_Desc] = "Other" then "Fish dish other" 
+				else if [CommonSpeciesName] = "Fish dish" and [SACN_Desc] = "Oily" then "Fish dish oily" 
+				else if [CommonSpeciesName] = "Fish dish" and [SACN_Desc] = "Lean" then "Fish dish lean" 
+				else if [CommonSpeciesName] = "Other marine fish" and [ISSCAAP_Desc] = "Diadromous" then "Other diadromous fish"
+				else if [CommonSpeciesName] = "Other marine fish" and [SACN_Desc] = "Lean" then "Other marine fish lean" 
+				else if [CommonSpeciesName] = "Other marine fish" and [SACN_Desc] = "Oily" then "Other marine fish oily"  
+				else if [CommonSpeciesName] = "Other molluscs" and [ISSCAAP_Desc] = "Crustaceans" then "Other crustaceans" 
+				else if [CommonSpeciesName] = "Other molluscs and aquatic invertebrates" and [SACN_Desc] = "Other" then "Other"
+				 else [CommonSpeciesName]),
+				    #"Sorted Rows" = Table.Sort(#"Added Custom",{{"CommonSpeciesNameDetail", Order.Ascending}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Sorted Rows", {"CommonSpeciesNameDetail", "ISSCAAP_Desc", "DataSupplier"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Duplicates",{"ISSCAAP_Code", "UniqueSeafoodSpecies"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([DataSupplier] <> "Norwegian_FC" and [DataSupplier] <> "PHE")),
+				    #"Pivoted Column" = Table.Pivot(#"Filtered Rows", List.Distinct(#"Filtered Rows"[DataSupplier]), "DataSupplier", "CFValue", List.Sum),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Pivoted Column",{"CommonSpeciesNameDetail", "CommonSpeciesName", "SACN_Desc", "ISSCAAP_Desc", "HMRC", "NDNS", "CEFAS", "MMO", "DEFRA_eatenOut", "DEFRA_household"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Reordered Columns", {"CommonSpeciesNameDetail"}, FishNutrition, {"Species"}, "FishNutrition", JoinKind.LeftOuter),
+				    #"Expanded FishNutrition" = Table.ExpandTableColumn(#"Merged Queries", "FishNutrition", {"Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_µg100g", "VitaminD_µg100g", "VitaminB12_µg100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_µg100g", "Iodine_µg100g"}, {"Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_µg100g", "VitaminD_µg100g", "VitaminB12_µg100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_µg100g", "Iodine_µg100g"}),
+				    #"Appended Query" = Table.Combine({#"Expanded FishNutrition", MissingSpecies})
+				in
+				    #"Appended Query"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

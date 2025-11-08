@@ -1,0 +1,13 @@
+relationship AutoDetected_d27e95a8-2ade-41b0-b41a-673d4dbcb754
+	fromColumn: SeafoodData.CalendarYear
+	toColumn: Populations.CalendarYear
+
+relationship 0dc4d62f-7610-63db-37b4-3b2e1d20729a
+	fromColumn: SeafoodData.SpeciesDetail
+	toColumn: FishTypesCFValues.CommonSpeciesNameDetail
+
+relationship 1ca93bee-20ce-4157-9475-56dd53bbd8c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SeafoodData.CalendarYearDate
+	toColumn: LocalDateTable_36e05b9b-61a7-4be2-bad7-8c03be43c7c3.Date
+

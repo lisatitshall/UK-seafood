@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "14d7c00b63806e03e947",
+  "displayName": "Denmark",
+  "displayOption": "FitToPage",
+  "height": 350,
+  "width": 600,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "af0a5ac5717bc166a1d7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "Danish fish consumption per person per week"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "c084ce8e080dd4de65b1",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "a4bca83d9315d1210c0b",
+        "boundFilter": "af0a5ac5717bc166a1d7",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "Danish fish consumption per person per week"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

@@ -1,0 +1,82 @@
+table DataSources
+	lineageTag: 5b1e198d-1624-413a-a58a-97f8d64f79c6
+
+	column DataSupplier
+		dataType: string
+		lineageTag: 45fdb428-7659-4f8c-a60c-c64d71809ae3
+		summarizeBy: none
+		sourceColumn: DataSupplier
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataSet
+		dataType: string
+		lineageTag: 97d6bfda-48c8-44d0-97b4-bd885c35edf4
+		summarizeBy: none
+		sourceColumn: DataSet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Commodity
+		dataType: string
+		lineageTag: 304ff922-16e7-4794-a849-3b2b2c705ce2
+		summarizeBy: none
+		sourceColumn: Commodity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Flag
+		dataType: string
+		lineageTag: 028d8b6f-4111-4c7e-bde8-5857cf831b41
+		summarizeBy: none
+		sourceColumn: Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagDescription
+		dataType: string
+		lineageTag: 4f36e391-8a45-4408-9d83-0c639b893686
+		summarizeBy: none
+		sourceColumn: FlagDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommodityDetail
+		dataType: string
+		lineageTag: 647d231b-4b77-4cb8-82a0-cd5e07fc23e5
+		summarizeBy: none
+		sourceColumn: CommodityDetail
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataSupplierDetail
+		dataType: string
+		lineageTag: f5f02417-3c29-43a7-baea-b67d02f6b6a7
+		summarizeBy: none
+		sourceColumn: DataSupplierDetail
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DataSources = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\UKSeafoodSupplyChain.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"DataSet", type text}, {"Commodity", type text}, {"Species", type text}, {"SpeciesType", type text}, {"SACN", type text}, {"Volume", type text}, {"Units", type text}, {"CalendarYear", Int64.Type}, {"TemporalResolution", type text}, {"Flag", type text}, {"FlagDescription", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"Volume"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Volume", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"SpeciesType", "SACN"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Removed Columns",{"TemporalResolution", "Units"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns1",{{"Volume", "VolumeGrams"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "CommodityDetail", each if [DataSet] = "Family Foods Household" then "PurchasesHome" else if [DataSet] = "Family Foods Eaten Out" then "PurchasesOut" else if [DataSupplier] = "CEFAS" then "ProductionAquaculture" else if [DataSupplier] = "MMO" then "ProductionFisheries" else [Commodity]),
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "DataSupplierDetail", each if [DataSet] = "Family Foods Household" then "DEFRA_household" else if [DataSet] = "Family Foods Eaten Out" then "DEFRA_eatenOut" else [DataSupplier]),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Added Conditional Column",{"DataSupplier", "DataSet", "Commodity", "Flag", "FlagDescription", "CommodityDetail", "DataSupplierDetail"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

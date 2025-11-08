@@ -1,0 +1,228 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "18595ddecf20526a4b91",
+  "displayName": "Nutrition",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f321cb689ae2e7d60709",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Spain"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "88ecdd7b15e31058bca0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "France"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "ef601f266d98a5503006",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Denmark"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "68af58d10419a8a16d46",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Italy"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "d46e818413119889a091",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Portugal"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "dee60d6199eaea00d21c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Spain"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "9ad29fb2665eca800538",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Sweden"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "6b442ade4947d2e82b9a",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "60b73c6bc78de45678a5",
+        "boundFilter": "f321cb689ae2e7d60709",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Spain"
+          }
+        }
+      },
+      {
+        "name": "27382684c83089ca8304",
+        "boundFilter": "88ecdd7b15e31058bca0",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "France"
+          }
+        }
+      },
+      {
+        "name": "b1f844b8408a25b301a8",
+        "boundFilter": "ef601f266d98a5503006",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Denmark"
+          }
+        }
+      },
+      {
+        "name": "b288ca0d90968a001c66",
+        "boundFilter": "68af58d10419a8a16d46",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Italy"
+          }
+        }
+      },
+      {
+        "name": "001b4570175a01345d50",
+        "boundFilter": "d46e818413119889a091",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Portugal"
+          }
+        }
+      },
+      {
+        "name": "2aafc92a04b6eeee6558",
+        "boundFilter": "dee60d6199eaea00d21c",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Spain"
+          }
+        }
+      },
+      {
+        "name": "5efc6afa2e131e4cc1a6",
+        "boundFilter": "9ad29fb2665eca800538",
+        "asAggregation": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SeafoodData"
+              }
+            },
+            "Property": "Sweden"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["FishTypesCFValues","SeafoodData","Populations","FishNutrition","DataSources","MeasuresTable","EUConsumption","EUPopulation","MissingSpecies","EUConsumptionMissing"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table FishTypesCFValues
+ref table SeafoodData
+ref table Populations
+ref table FishNutrition
+ref table DataSources
+ref table DateTableTemplate_d1a3fbb0-254a-48aa-9d82-ba34b64bd730
+ref table MeasuresTable
+ref table LocalDateTable_36e05b9b-61a7-4be2-bad7-8c03be43c7c3
+ref table EUConsumption
+ref table EUPopulation
+ref table MissingSpecies
+ref table EUConsumptionMissing
+
+ref cultureInfo en-US
+

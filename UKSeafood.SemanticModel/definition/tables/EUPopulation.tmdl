@@ -1,0 +1,170 @@
+table EUPopulation
+	isHidden
+	lineageTag: 712774b4-7470-4635-89e3-e246234c06ab
+
+	column Attribute
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 93032b2d-4a75-4eac-9735-c40910087f5c
+		summarizeBy: sum
+		sourceColumn: Attribute
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Germany
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4aacf2da-d397-4a9e-af64-1590c50e9a07
+		summarizeBy: sum
+		sourceColumn: Germany
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Denmark
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2738802a-c533-42f3-9601-38f705effa5f
+		summarizeBy: sum
+		sourceColumn: Denmark
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Spain
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 031d567e-1b2d-4aa9-8f14-ef1af36f1986
+		summarizeBy: sum
+		sourceColumn: Spain
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column France
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 91cba6e2-79fd-4372-abac-795190a4756b
+		summarizeBy: sum
+		sourceColumn: France
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hungary
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2f0c997a-168d-4648-b6b7-1e5468b82908
+		summarizeBy: sum
+		sourceColumn: Hungary
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ireland
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7569dfea-48dc-4216-b671-26fea3b87a00
+		summarizeBy: sum
+		sourceColumn: Ireland
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Italy
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cddc4c07-10b4-44d9-bbc0-d119b919eec2
+		summarizeBy: sum
+		sourceColumn: Italy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Netherlands
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0ef3734c-2d85-4f55-a0f3-7f6f121d7406
+		summarizeBy: sum
+		sourceColumn: Netherlands
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Poland
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 13d1eb9f-d96c-46da-afb0-bf9824c64399
+		summarizeBy: sum
+		sourceColumn: Poland
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Portugal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 910f8aa8-5898-4a15-b783-4a0ecfc8e37b
+		summarizeBy: sum
+		sourceColumn: Portugal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sweden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 08cc2cd0-72e0-424c-8b5d-47103db67a1b
+		summarizeBy: sum
+		sourceColumn: Sweden
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EUPopulation = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\44784\Documents\UKSeafood\EUPopulation.xlsx"), null, true),
+				    API_SP.POP.TOTL_DS2_en_csv_v2_7_Sheet = Source{[Item="API_SP.POP.TOTL_DS2_en_csv_v2_7",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(API_SP.POP.TOTL_DS2_en_csv_v2_7_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", Int64.Type}, {"Column6", Int64.Type}, {"Column7", Int64.Type}, {"Column8", Int64.Type}, {"Column9", Int64.Type}, {"Column10", Int64.Type}, {"Column11", Int64.Type}, {"Column12", Int64.Type}, {"Column13", Int64.Type}, {"Column14", Int64.Type}, {"Column15", Int64.Type}, {"Column16", Int64.Type}, {"Column17", Int64.Type}, {"Column18", Int64.Type}, {"Column19", Int64.Type}, {"Column20", Int64.Type}, {"Column21", Int64.Type}, {"Column22", Int64.Type}, {"Column23", Int64.Type}, {"Column24", Int64.Type}, {"Column25", Int64.Type}, {"Column26", Int64.Type}, {"Column27", Int64.Type}, {"Column28", Int64.Type}, {"Column29", Int64.Type}, {"Column30", Int64.Type}, {"Column31", Int64.Type}, {"Column32", Int64.Type}, {"Column33", Int64.Type}, {"Column34", Int64.Type}, {"Column35", Int64.Type}, {"Column36", Int64.Type}, {"Column37", Int64.Type}, {"Column38", Int64.Type}, {"Column39", Int64.Type}, {"Column40", Int64.Type}, {"Column41", Int64.Type}, {"Column42", Int64.Type}, {"Column43", Int64.Type}, {"Column44", Int64.Type}, {"Column45", Int64.Type}, {"Column46", Int64.Type}, {"Column47", Int64.Type}, {"Column48", Int64.Type}, {"Column49", Int64.Type}, {"Column50", Int64.Type}, {"Column51", Int64.Type}, {"Column52", Int64.Type}, {"Column53", Int64.Type}, {"Column54", Int64.Type}, {"Column55", Int64.Type}, {"Column56", Int64.Type}, {"Column57", Int64.Type}, {"Column58", Int64.Type}, {"Column59", Int64.Type}, {"Column60", Int64.Type}, {"Column61", Int64.Type}, {"Column62", Int64.Type}, {"Column63", Int64.Type}, {"Column64", Int64.Type}, {"Column65", Int64.Type}, {"Column66", Int64.Type}, {"Column67", Int64.Type}, {"Column68", Int64.Type}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Country Name", type text}, {"Country Code", type text}, {"Indicator Name", type text}, {"Indicator Code", type text}, {"1960", Int64.Type}, {"1961", Int64.Type}, {"1962", Int64.Type}, {"1963", Int64.Type}, {"1964", Int64.Type}, {"1965", Int64.Type}, {"1966", Int64.Type}, {"1967", Int64.Type}, {"1968", Int64.Type}, {"1969", Int64.Type}, {"1970", Int64.Type}, {"1971", Int64.Type}, {"1972", Int64.Type}, {"1973", Int64.Type}, {"1974", Int64.Type}, {"1975", Int64.Type}, {"1976", Int64.Type}, {"1977", Int64.Type}, {"1978", Int64.Type}, {"1979", Int64.Type}, {"1980", Int64.Type}, {"1981", Int64.Type}, {"1982", Int64.Type}, {"1983", Int64.Type}, {"1984", Int64.Type}, {"1985", Int64.Type}, {"1986", Int64.Type}, {"1987", Int64.Type}, {"1988", Int64.Type}, {"1989", Int64.Type}, {"1990", Int64.Type}, {"1991", Int64.Type}, {"1992", Int64.Type}, {"1993", Int64.Type}, {"1994", Int64.Type}, {"1995", Int64.Type}, {"1996", Int64.Type}, {"1997", Int64.Type}, {"1998", Int64.Type}, {"1999", Int64.Type}, {"2000", Int64.Type}, {"2001", Int64.Type}, {"2002", Int64.Type}, {"2003", Int64.Type}, {"2004", Int64.Type}, {"2005", Int64.Type}, {"2006", Int64.Type}, {"2007", Int64.Type}, {"2008", Int64.Type}, {"2009", Int64.Type}, {"2010", Int64.Type}, {"2011", Int64.Type}, {"2012", Int64.Type}, {"2013", Int64.Type}, {"2014", Int64.Type}, {"2015", Int64.Type}, {"2016", Int64.Type}, {"2017", Int64.Type}, {"2018", Int64.Type}, {"2019", Int64.Type}, {"2020", Int64.Type}, {"2021", Int64.Type}, {"2022", Int64.Type}, {"2023", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"Country Code", "Indicator Name", "Indicator Code", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008"}),
+				    #"Unpivoted Only Selected Columns" = Table.Unpivot(#"Removed Columns", {"2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"}, "Attribute", "Value"),
+				    #"Pivoted Column" = Table.Pivot(#"Unpivoted Only Selected Columns", List.Distinct(#"Unpivoted Only Selected Columns"[#"Country Name"]), "Country Name", "Value", List.Sum),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Pivoted Column",{{"Attribute", Int64.Type}})
+				in
+				    #"Changed Type2"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

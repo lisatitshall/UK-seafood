@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "c9dcc9956dda8b217d51",
+  "displayName": "France",
+  "displayOption": "FitToPage",
+  "height": 350,
+  "width": 600,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "852046415ca28041030e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "French fish consumption per person per week"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "99ee6e0ac3a905352717",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "ccabba8ced00568770b5",
+        "boundFilter": "852046415ca28041030e",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "French fish consumption per person per week"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

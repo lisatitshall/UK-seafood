@@ -1,0 +1,220 @@
+table EUConsumptionMissing
+	isHidden
+	lineageTag: d38b6eb6-7d6d-4413-9d11-dcb58623e90e
+
+	column CalendarYear
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8a018f7f-81e2-479c-a244-26ebc8ed9bda
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpeciesDetail
+		dataType: string
+		isHidden
+		lineageTag: 6e034613-dfe3-4fae-a3ef-9d09a739a759
+		summarizeBy: none
+		sourceColumn: SpeciesDetail
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Italy
+		dataType: double
+		isHidden
+		lineageTag: 3e6ceb52-1585-47fd-8296-490b4e82a0e8
+		summarizeBy: sum
+		sourceColumn: Italy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column France
+		dataType: double
+		isHidden
+		lineageTag: cf07d93d-f010-4f1c-a5fe-e16ca56deebf
+		summarizeBy: sum
+		sourceColumn: France
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Spain
+		dataType: double
+		isHidden
+		lineageTag: aad0d5ce-0eae-4bf8-bd9d-13d560d7ebf0
+		summarizeBy: sum
+		sourceColumn: Spain
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Portugal
+		dataType: double
+		isHidden
+		lineageTag: fb0d7358-7150-432c-92f5-67d32b78cbf0
+		summarizeBy: sum
+		sourceColumn: Portugal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Poland
+		dataType: double
+		isHidden
+		lineageTag: f7b1d027-0185-4afb-8f19-39e5caec58b7
+		summarizeBy: sum
+		sourceColumn: Poland
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Germany
+		dataType: double
+		isHidden
+		lineageTag: 8a92459a-0a8c-4f30-ac49-d8232984e427
+		summarizeBy: sum
+		sourceColumn: Germany
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Denmark
+		dataType: double
+		isHidden
+		lineageTag: a607a955-ce8f-4c2b-a374-d911a3a98736
+		summarizeBy: sum
+		sourceColumn: Denmark
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Netherlands
+		dataType: double
+		isHidden
+		lineageTag: 2e75a6de-9217-4af3-9922-3a85daf12f61
+		summarizeBy: sum
+		sourceColumn: Netherlands
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'United Kingdom'
+		dataType: double
+		isHidden
+		lineageTag: a2719124-db04-4a05-8a55-6de2aaac4730
+		summarizeBy: sum
+		sourceColumn: United Kingdom
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sweden
+		dataType: double
+		isHidden
+		lineageTag: 5a74a114-74ab-418d-baf3-25cddbae86ed
+		summarizeBy: sum
+		sourceColumn: Sweden
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ireland
+		dataType: double
+		isHidden
+		lineageTag: a79a0f03-278c-4be2-a2b5-777074aec61b
+		summarizeBy: sum
+		sourceColumn: Ireland
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Hungary
+		dataType: double
+		isHidden
+		lineageTag: c25ce5ed-22e9-4491-b9e5-996849e4394f
+		summarizeBy: sum
+		sourceColumn: Hungary
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition EUConsumptionMissing = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\44784\Documents\UKSeafood\EUConsumption.xlsx"), null, true),
+				    Monthly_Consumption_Sheet = Source{[Item="Monthly_Consumption",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Monthly_Consumption_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"country", type text}, {"year", Int64.Type}, {"month", Int64.Type}, {"MCS", type text}, {"CG", type text}, {"volume(Kg)", type number}, {"weight", type text}, {"value(EUR)", type number}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"weight", "value(EUR)", "MCS"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"volume(Kg)", "NetWeightGrams"}}),
+				    #"Multiplied Column" = Table.TransformColumns(#"Renamed Columns", {{"NetWeightGrams", each _ * 1000, type number}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Multiplied Column","Alaska pollock","Pollock",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Flounder, other","Flounder",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Halibut, other","Halibut",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Monk","Monkfish",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Mussel Mytilus spp","Mussel",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Plaice, other","Plaice",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Saithe (=Coalfish)","Pollock",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","Seabass, European","Seabass",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Seabream, gilthead","Bream",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","Sole, other","Sole",Replacer.ReplaceText,{"CG"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","Tuna, miscellaneous","Tuna",Replacer.ReplaceText,{"CG"}),
+				    #"Grouped Rows" = Table.Group(#"Replaced Value10", {"country", "year", "CG"}, {{"ConsumptionNetWeightGrams", each List.Sum([NetWeightGrams]), type number}}),
+				    #"Sorted Rows1" = Table.Sort(#"Grouped Rows",{{"CG", Order.Ascending}}),
+				    #"Pivoted Column" = Table.Pivot(#"Sorted Rows1", List.Distinct(#"Sorted Rows1"[country]), "country", "ConsumptionNetWeightGrams", List.Sum),
+				    #"Trimmed Text" = Table.TransformColumns(#"Pivoted Column",{{"CG", Text.Trim, type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Trimmed Text", each ([CG] = "Other salmonids" or [CG] = "Other unspecified products" or [CG] = "Pangasius" or [CG] = "Pollack" or [CG] = "Shrimp Crangon spp" or [CG] = "Shrimp, miscellaneous")),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"year", "CalendarYear"}, {"CG", "SpeciesDetail"}})
+				in
+				    #"Renamed Columns1"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

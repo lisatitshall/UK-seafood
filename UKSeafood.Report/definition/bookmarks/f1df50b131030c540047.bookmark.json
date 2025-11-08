@@ -1,0 +1,472 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Oily fish view",
+  "name": "f1df50b131030c540047",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "18595ddecf20526a4b91",
+    "sections": {
+      "18595ddecf20526a4b91": {
+        "visualContainers": {
+          "dc41a1ac0c6ce7f9fe42": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "21cbcb231d643521b169",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "65b3322bc416d6ce5377",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Oily fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6f55a29ca87f02e6d831": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4fd07582f2e670a06832",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Recommended Consumption"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "91ac5a1e4f6f4f2eca44",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a55e309b368958fe5ea3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Total Consumption"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "kpi",
+              "objects": {}
+            }
+          },
+          "f08e6166cc2c604b1303": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "dc712d06fb31cacd6fa5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7e6bab5bd2c750dc0473",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Total Consumption"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "274a4f023855eed815dc",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Recommended Consumption"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bc852b7c1d0c4c7ee610",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Percentage of Recommendation"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "0512fc91c33a73ad5875": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "c0173e4afa2f6d6de22b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "24d26dc01757d9415499",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6fb8e758d677ba5cd4d2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7a8eda0ea493d41a8175",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "French fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ddaa8719ea49ac769c8d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Danish fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d5135737f336d4f2a09b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Italian fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cd7ebd3c0371498fbd3c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Portugese fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "318b084ef4c5225bbe7a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Spanish fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "df9aa11b417ccd8eeeb4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Swedish fish consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "33fb005b691b1c2647ce": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
+          "31675b30b403e52943c7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "aed659b33f56922e43fa",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c49f1d97d0e705c7461b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasuresTable"
+                        }
+                      },
+                      "Property": "Consumption per person per week"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Populations"
+                        }
+                      },
+                      "Property": "CalendarYear"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

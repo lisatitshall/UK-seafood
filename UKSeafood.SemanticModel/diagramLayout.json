@@ -1,0 +1,152 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 352.819683908046
+          },
+          "nodeIndex": "DataSources",
+          "nodeLineageTag": "5b1e198d-1624-413a-a58a-97f8d64f79c6",
+          "size": {
+            "height": 186.33333333333334,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 13.459051724137879
+          },
+          "nodeIndex": "FishNutrition",
+          "nodeLineageTag": "3328e873-98c0-42e4-960a-2777f28aedde",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 652.2643678160922,
+            "y": 201.49353448275855
+          },
+          "nodeIndex": "FishTypesCFValues",
+          "nodeLineageTag": "a31c7b32-cca4-4c75-8084-1397a34b7ec3",
+          "size": {
+            "height": 203.17241379310343,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 268.35632183908069,
+            "y": 18.585488505747094
+          },
+          "nodeIndex": "MeasuresTable",
+          "nodeLineageTag": "f46fc316-383e-45b3-bb91-e2d737ae5445",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 557.819683908046
+          },
+          "nodeIndex": "EUConsumption",
+          "nodeLineageTag": "4625dc0a-a7cf-46c7-bfb0-b8c8cc5207ab",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 265.26436781609254,
+            "y": 153.93318965517233
+          },
+          "nodeIndex": "EUPopulation",
+          "nodeLineageTag": "712774b4-7470-4635-89e3-e246234c06ab",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1336.1379310344828,
+            "y": 220.66594827586195
+          },
+          "nodeIndex": "Populations",
+          "nodeLineageTag": "1b586dea-b9b2-4cc1-9d5d-d6232e0f1731",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 975.91954022988534,
+            "y": 351.72341954022983
+          },
+          "nodeIndex": "SeafoodData",
+          "nodeLineageTag": "e675944d-3983-4976-bdf5-68e8b2f9b174",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 264.91954022988557,
+            "y": 483.60488505747128
+          },
+          "nodeIndex": "MissingSpecies",
+          "nodeLineageTag": "9c5bce28-df2f-4f65-866d-2a4d109ff55a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 270.13793103448279,
+            "y": 613
+          },
+          "nodeIndex": "EUConsumptionMissing",
+          "nodeLineageTag": "d38b6eb6-7d6d-4413-9d11-dcb58623e90e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 60,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

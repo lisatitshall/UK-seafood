@@ -1,0 +1,343 @@
+table MeasuresTable
+	lineageTag: f46fc316-383e-45b3-bb91-e2d737ae5445
+
+	measure 'Total Consumption' = SUM(SeafoodData[UKConsumption])
+		formatString: #,0
+		lineageTag: 65c8d135-4950-4d34-82d2-aad41fdb9fc4
+
+	measure 'Previous Year Consumption' = ```
+			IF(
+			    NOT ISBLANK([Total Consumption]),
+			    CALCULATE(
+			    [Total Consumption],  
+			    DATEADD(SeafoodData[CalendarYearDate], -1, YEAR),
+			    ALLSELECTED()
+			    )  
+			    )
+			```
+		formatString: 0
+		lineageTag: 2e8608e4-db23-488d-a59f-d1a8f6f6502e
+
+	measure 'Consumption Growth %' = ```
+			IF(
+			    NOT ISBLANK([Total Consumption]), 
+			    DIVIDE([Total Consumption] - [Previous Year Consumption], [Previous Year Consumption]))
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: df3bb539-b66d-46ce-baef-2a0c17cdbe76
+
+	measure 'Consumption Per Person' = ```
+			DIVIDE(
+			    SUM(SeafoodData[UKConsumption]), 
+			    SUM(Populations[UK])
+			    )
+			```
+		formatString: 0
+		lineageTag: c4f3c514-112f-48d5-963d-b382fbcad5c0
+
+	measure 'Consumption per person per week' = ```
+			DIVIDE(
+			    [Consumption Per Person], 
+			    52
+			    )
+			```
+		formatString: 0
+		lineageTag: 439d7e48-d55f-428f-a87c-b8f5541b1058
+
+	measure 'Oily Fish Consumption Per Person' = ```
+			CALCULATE(
+			    DIVIDE(
+			        SUM(SeafoodData[UKConsumption]), 
+			        SUM(Populations[UK])
+			        ),
+			        FishTypesCFValues[SACN_Desc] = "Oily"
+			)
+			```
+		lineageTag: 68dda845-4a1f-41c5-acb6-54cf94f49ed9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Oily fish consumption per person per week' = ```
+			DIVIDE(
+			    [Oily Fish Consumption Per Person], 
+			    52
+			    )
+			```
+		lineageTag: f0555470-2cc2-4f3f-b042-a1152a0fb05b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Recommended Consumption' = sum(Populations[UK]) * 280 * 52
+		formatString: #,0
+		lineageTag: ba81ba31-5d97-4daa-9c7e-95c920f03da8
+
+	measure 'Percentage of Recommendation' = ```
+			DIVIDE(
+			    [Total Consumption],
+			    [Recommended Consumption])
+			    
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: ab987e25-b7bd-4cd3-9773-a2c4f108882d
+
+	measure 'French Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[France]), 
+			        SUM(Populations[France])
+			    )
+			```
+		lineageTag: 65a88b70-e7a0-47b8-a029-0b5a20bdef56
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'French fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [French Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: db593392-634d-46e4-838a-eb4887d2e911
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Italian Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Italy]), 
+			        SUM(Populations[Italy])
+			    )
+			```
+		lineageTag: eb663533-6671-4fa8-9514-490af079a2a4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Spanish Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Spain]), 
+			        SUM(Populations[Spain])
+			    )
+			```
+		lineageTag: c122978e-a268-4798-b28e-aa3ea6ddcc2f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Portugese Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Portugal]), 
+			        SUM(Populations[Portugal])
+			    )
+			```
+		lineageTag: 810d8e97-3ca4-4d30-a58d-800601cb0790
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Polish Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Poland]), 
+			        SUM(Populations[Poland])
+			    )
+			```
+		lineageTag: 03dd12de-082f-48c5-86c3-79d99a5ff412
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'German Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Germany]), 
+			        SUM(Populations[Germany])
+			    )
+			```
+		lineageTag: bb0fcd14-2f4e-4b01-a65a-a33e592e37c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dutch Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Netherlands]), 
+			        SUM(Populations[Netherlands])
+			    )
+			```
+		lineageTag: 1bb39f49-0cec-43f5-9af5-1de693a69d94
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Danish Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Denmark]), 
+			        SUM(Populations[Denmark])
+			    )
+			```
+		lineageTag: 02b059bd-a783-462a-bc41-290fbfa4e790
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Irish Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Ireland]), 
+			        SUM(Populations[Ireland])
+			    )
+			```
+		lineageTag: 0f6218a5-ccfc-4f7a-99b2-4bea1f759eda
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Swedish Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Sweden]), 
+			        SUM(Populations[Sweden])
+			    )
+			```
+		lineageTag: 53f38d73-768f-4889-9302-57edb7a6e51b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Hungarian Fish Consumption Per Person' = ```
+			
+			    DIVIDE(
+			        SUM(SeafoodData[Hungary]), 
+			        SUM(Populations[Hungary])
+			    )
+			```
+		lineageTag: 079ebb21-f057-4957-b050-2144aa488301
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Italian fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Italian Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: b5dddb55-a12a-4d44-8df7-413b79d48bbc
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Spanish fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Spanish Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: 801bd9d1-f332-4b5a-bb03-2386fe63b5cb
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Portugese fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Portugese Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: 226a884a-e3bf-4a86-8b1a-d1e5705d1b0d
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Polish fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Polish Fish Consumption Per Person],
+			        52
+			    )
+			```
+		lineageTag: c21a4dc5-62e8-4ddc-835e-7fa804cfdb8c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'German fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [German Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: d0273c50-9a27-4a4c-abf4-ad69ab67a0b4
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Danish fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Danish Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: d152f0c6-6f2b-490a-9744-aa2274e390a9
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Dutch fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Dutch Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: ec556b48-eaf9-4115-8706-cfcfcf72725b
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Irish fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Irish Fish Consumption Per Person],
+			        52
+			    )
+			```
+		lineageTag: 232b73d3-e732-4058-b9b3-121c855f0bf4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Swedish fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Swedish Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0
+		lineageTag: 712729fa-211a-4b11-b87c-65a3b6f493db
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Hungarian fish consumption per person per week' = ```
+			
+			    DIVIDE(
+			        [Hungarian Fish Consumption Per Person],
+			        52
+			    )
+			```
+		formatString: 0.00
+		lineageTag: c5a1941a-e770-450a-8054-aba341d24f46
+
+	partition MeasuresTable = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

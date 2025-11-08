@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "bd55b5b6a9d37c080585",
+  "displayName": "Italy",
+  "displayOption": "FitToPage",
+  "height": 350,
+  "width": 600,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "085e7fac99adda59aecc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "Italian fish consumption per person per week"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "da0e7e70d0d07662e401",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "673e058f03c70b4eeb92",
+        "boundFilter": "085e7fac99adda59aecc",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "Italian fish consumption per person per week"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

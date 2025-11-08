@@ -1,0 +1,31 @@
+table MissingSpecies
+	isHidden
+	lineageTag: 9c5bce28-df2f-4f65-866d-2a4d109ff55a
+
+	column CommonSpeciesNameDetail
+		dataType: string
+		isHidden
+		lineageTag: bd87b58b-5805-475c-a385-aa594ebeffa7
+		summarizeBy: none
+		sourceColumn: CommonSpeciesNameDetail
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MissingSpecies = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("TYtLCoAwDESvElx7Cw+g4FK6KG3UYJuExt7fP7ibefNmmpp+X7GA+ZSFKVrj2o9VNsVAM2EELRJr2J958Lx4o/o2ScmH7c7jWigrdOU0hMFUf7iFTBbwtBnlOrsD", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Species = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Species", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Species", "CommonSpeciesNameDetail"}})
+				in
+				    #"Renamed Columns"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

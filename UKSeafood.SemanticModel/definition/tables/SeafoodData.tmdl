@@ -1,0 +1,368 @@
+table SeafoodData
+	lineageTag: e675944d-3983-4976-bdf5-68e8b2f9b174
+
+	measure 'Sum of Consumption rolling average 2' =
+			
+			IF(
+				ISFILTERED('SeafoodData'[CalendarYearDate]),
+				ERROR("Time intelligence quick measures can only be grouped or filtered by the Power BI-provided date hierarchy or primary date column."),
+				VAR __LAST_DATE = ENDOFYEAR('SeafoodData'[CalendarYearDate].[Date])
+				VAR __DATE_PERIOD =
+					DATESBETWEEN(
+						'SeafoodData'[CalendarYearDate].[Date],
+						STARTOFYEAR(DATEADD(__LAST_DATE, -3, YEAR)),
+						__LAST_DATE
+					)
+				RETURN
+					AVERAGEX(
+						CALCULATETABLE(
+							SUMMARIZE(
+								VALUES('SeafoodData'),
+								'SeafoodData'[CalendarYearDate].[Year]
+							),
+							__DATE_PERIOD
+						),
+						CALCULATE(
+							SUM('SeafoodData'[UKConsumption]),
+							ALL(
+								'SeafoodData'[CalendarYearDate].[QuarterNo],
+								'SeafoodData'[CalendarYearDate].[Quarter],
+								'SeafoodData'[CalendarYearDate].[MonthNo],
+								'SeafoodData'[CalendarYearDate].[Month],
+								'SeafoodData'[CalendarYearDate].[Day]
+							)
+						)
+					)
+			)
+		formatString: 0
+		lineageTag: f7240a65-d7b9-47be-bc79-f71b5aa17542
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "RollingAverage"
+				}
+
+		changedProperty = FormatString
+
+	column Species
+		dataType: string
+		lineageTag: 301ba770-2057-4062-932f-396824925f71
+		summarizeBy: none
+		sourceColumn: Species
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 14436f3d-79e7-42e9-8fab-2d5544be964d
+		summarizeBy: none
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKExports
+		dataType: int64
+		formatString: 0
+		lineageTag: 22db778d-3448-444c-ab14-d4ae3fa234c6
+		summarizeBy: sum
+		sourceColumn: UKExports
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKImports
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f3ff69d-f8e2-47d1-be64-4a425460c8bc
+		summarizeBy: sum
+		sourceColumn: UKImports
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKProductionFisheries
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d2e383d-ce50-4a29-8482-4e5bbc68a9d1
+		summarizeBy: sum
+		sourceColumn: UKProductionFisheries
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKProductionAquaculture
+		dataType: int64
+		formatString: 0
+		lineageTag: e1ce6c0e-8fed-4bac-85fb-3a849fbbecd4
+		summarizeBy: sum
+		sourceColumn: UKProductionAquaculture
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKConsumption
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ec16288-e967-46d0-94e2-4c3e4469c9f1
+		summarizeBy: sum
+		sourceColumn: UKConsumption
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKPurchasesOut
+		dataType: int64
+		formatString: 0
+		lineageTag: 806f9918-caa2-471f-aa07-2fc2a2bce59a
+		summarizeBy: sum
+		sourceColumn: UKPurchasesOut
+
+		annotation SummarizationSetBy = Automatic
+
+	column UKPurchasesHome
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f96eb7f-f9d4-4980-be83-8bb821ddc84e
+		summarizeBy: sum
+		sourceColumn: UKPurchasesHome
+
+		annotation SummarizationSetBy = Automatic
+
+	column AllData =
+			IF(
+			    //is there any data on what we have
+			    (NOT ISBLANK(SeafoodData[UKImports]) || NOT ISBLANK(SeafoodData[UKProductionFisheries]) || NOT ISBLANK(SeafoodData[UKProductionAquaculture])) &&
+			    //is there any data on what we're using
+			    (NOT ISBLANK(SeafoodData[UKExports]) || NOT ISBLANK(SeafoodData[UKConsumption]) || NOT ISBLANK(SeafoodData[UKPurchasesOut]) || NOT ISBLANK(SeafoodData[UKPurchasesHome])),
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: cd39d3b4-277e-4cfd-9c81-d40e26c2bafd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column AllProduction = SeafoodData[UKProductionAquaculture] + SeafoodData[UKProductionFisheries]
+		formatString: 0
+		lineageTag: b87d7949-4299-4945-8e43-c95b1605c35b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column AllPurchases = SeafoodData[UKPurchasesHome] + SeafoodData[UKPurchasesOut]
+		formatString: 0
+		lineageTag: 2792730e-91e7-4345-988a-0d08e29a46ae
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpeciesDetail
+		dataType: string
+		lineageTag: 24d21b2a-40fc-4fe7-99ce-5180c69399d8
+		summarizeBy: none
+		sourceColumn: SpeciesDetail
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearText
+		dataType: string
+		lineageTag: 45ab94cf-129c-4f22-b5a2-c80f7107d149
+		summarizeBy: none
+		sourceColumn: CalendarYearText
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a9e2d516-1770-4f8f-99ee-d24136f69399
+		summarizeBy: none
+		sourceColumn: CalendarYearDate
+
+		variation Variation
+			isDefault
+			relationship: 1ca93bee-20ce-4157-9475-56dd53bbd8c1
+			defaultHierarchy: LocalDateTable_36e05b9b-61a7-4be2-bad7-8c03be43c7c3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BigFive =
+			IF(
+			    [SpeciesDetail] IN {"Salmon", "Tuna", "Cod", "Prawn", "Haddock"},
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 0308ca49-acf9-4053-ad3b-3fd71b29797d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fish dish' =
+			IF(
+			    [Species] = "Fish dish",
+			    1,
+			    0)
+		formatString: 0
+		lineageTag: 10b67a43-adeb-4fc4-8fbe-376dc667da20
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Italy
+		dataType: double
+		lineageTag: b860587b-c78f-42e5-bbe1-257b4be145f7
+		summarizeBy: sum
+		sourceColumn: Italy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column France
+		dataType: double
+		formatString: 0
+		lineageTag: 523242b1-775d-4541-9b59-a631b064ab70
+		summarizeBy: sum
+		sourceColumn: France
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Spain
+		dataType: double
+		lineageTag: 00274ae8-c7a5-41a2-b018-64a40fdb4bc1
+		summarizeBy: sum
+		sourceColumn: Spain
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Portugal
+		dataType: double
+		lineageTag: d413e938-a159-4f3f-8aff-57a9008ae673
+		summarizeBy: sum
+		sourceColumn: Portugal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Poland
+		dataType: double
+		lineageTag: 8fb52bc3-8382-4205-a729-24c3c674657f
+		summarizeBy: sum
+		sourceColumn: Poland
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Germany
+		dataType: double
+		lineageTag: ddbd3059-9917-4bd0-b6df-391917b1332b
+		summarizeBy: sum
+		sourceColumn: Germany
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Denmark
+		dataType: double
+		lineageTag: 839d643e-e6fc-4b6f-a81d-76df0ecb55d1
+		summarizeBy: sum
+		sourceColumn: Denmark
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Netherlands
+		dataType: double
+		lineageTag: a57c81fc-d961-4211-b6ff-6c9ea86be597
+		summarizeBy: sum
+		sourceColumn: Netherlands
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sweden
+		dataType: double
+		lineageTag: 8162a2bc-db6a-4f17-95f5-e23e78e4f652
+		summarizeBy: sum
+		sourceColumn: Sweden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ireland
+		dataType: double
+		lineageTag: b250580a-c107-4fd0-ba3c-066bf0fe5c26
+		summarizeBy: sum
+		sourceColumn: Ireland
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Hungary
+		dataType: double
+		lineageTag: a2377c9a-1133-4749-be2c-078341fdbcdb
+		summarizeBy: sum
+		sourceColumn: Hungary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition SeafoodData = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\UKSeafoodSupplyChain.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"DataSet", type text}, {"Commodity", type text}, {"Species", type text}, {"SpeciesType", type text}, {"SACN", type text}, {"Volume", type text}, {"Units", type text}, {"CalendarYear", Int64.Type}, {"TemporalResolution", type text}, {"Flag", type text}, {"FlagDescription", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"Volume"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Volume", Int64.Type}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"TemporalResolution", "Units"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns1",{{"Volume", "VolumeGrams"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "CommodityDetail", each if [DataSet] = "Family Foods Household" then "PurchasesHome" else if [DataSet] = "Family Foods Eaten Out" then "PurchasesOut" else if [DataSupplier] = "CEFAS" then "ProductionAquaculture" else if [DataSupplier] = "MMO" then "ProductionFisheries" else [Commodity]),
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "DataSupplierDetail", each if [DataSet] = "Family Foods Household" then "DEFRA_household" else if [DataSet] = "Family Foods Eaten Out" then "DEFRA_eatenOut" else [DataSupplier]),
+				    #"Trimmed Text" = Table.TransformColumns(#"Added Conditional Column",{{"Species", Text.Trim, type text}}),
+				    #"Added Custom1" = Table.AddColumn(#"Trimmed Text", "SpeciesDetail", each
+				if [Species] = "Fish dish" and [SACN] = "Other" then "Fish dish other" 
+				else if [Species] = "Fish dish" and [SACN] = "Oily" then "Fish dish oily" 
+				else if [Species] = "Fish dish" and [SACN] = "Lean" then "Fish dish lean" 
+				else if [Species] = "Other marine fish" and [SpeciesType] = "Diadromous" then "Other diadromous fish"
+				else if [Species] = "Other marine fish" and [SACN] = "Lean" then "Other marine fish lean" 
+				else if [Species] = "Other marine fish" and [SACN] = "Oily" then "Other marine fish oily"  
+				else if [Species] = "Other molluscs" and [SpeciesType] = "Crustaceans" then "Other crustaceans" 
+				else if [Species] = "Other molluscs and aquatic invertebrates" and [SACN] = "Other" then "Other"
+				 else [Species]),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom1",{"FlagDescription", "Flag", "DataSet", "SpeciesType", "SACN", "Commodity", "DataSupplier", "DataSupplierDetail"
+				}),
+				    #"Pivoted Column" = Table.Pivot(#"Removed Columns", List.Distinct(#"Removed Columns"[CommodityDetail]), "CommodityDetail", "VolumeGrams", List.Sum),
+				    #"Sorted Rows" = Table.Sort(#"Pivoted Column",{{"SpeciesDetail", Order.Ascending}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Sorted Rows", "CalendarYear", "CalendarYear - Copy"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Duplicated Column",{{"CalendarYear - Copy", type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type1",{{"CalendarYear - Copy", "CalendarYearText"}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Renamed Columns1", "CalendarYearText", "CalendarYearText - Copy"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Duplicated Column1",{{"CalendarYearText - Copy", type date}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Changed Type2",{{"CalendarYearText - Copy", "CalendarYearDate"}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Renamed Columns2",{{"CalendarYearDate", type datetime}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type3", {"CalendarYear", "SpeciesDetail"}, EUConsumption, {"year", "CG"}, "EUConsumption", JoinKind.LeftOuter),
+				    #"Expanded EUConsumption" = Table.ExpandTableColumn(#"Merged Queries", "EUConsumption", {"Italy", "France", "Spain", "Portugal", "Poland", "Germany", "Denmark", "Netherlands", "United Kingdom", "Sweden", "Ireland", "Hungary"}, {"Italy", "France", "Spain", "Portugal", "Poland", "Germany", "Denmark", "Netherlands", "United Kingdom", "Sweden", "Ireland", "Hungary"}),
+				    #"Appended Query" = Table.Combine({#"Expanded EUConsumption", EUConsumptionMissing}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Appended Query",{{"Exports", "UKExports"}, {"Imports", "UKImports"}, {"ProductionFisheries", "UKProductionFisheries"}, {"ProductionAquaculture", "UKProductionAquaculture"}, {"Consumption", "UKConsumption"}, {"PurchasesOut", "UKPurchasesOut"}, {"PurchasesHome", "UKPurchasesHome"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns3",{"United Kingdom"})
+				in
+				    #"Removed Columns2"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

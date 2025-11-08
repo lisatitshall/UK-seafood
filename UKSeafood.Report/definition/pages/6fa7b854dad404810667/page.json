@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "6fa7b854dad404810667",
+  "displayName": "Spain",
+  "displayOption": "FitToPage",
+  "height": 350,
+  "width": 600,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "33f98e773be036b63de4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "Spanish fish consumption per person per week"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "ee3dc99e2d572a3731ec",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "4a23557a06cb607053d9",
+        "boundFilter": "33f98e773be036b63de4",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasuresTable"
+              }
+            },
+            "Property": "Spanish fish consumption per person per week"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}
