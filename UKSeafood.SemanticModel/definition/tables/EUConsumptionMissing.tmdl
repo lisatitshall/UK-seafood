@@ -185,7 +185,7 @@ table EUConsumptionMissing
 		mode: import
 		source =
 				let
-				    Source = Excel.Workbook(File.Contents("C:\Users\44784\Documents\UKSeafood\EUConsumption.xlsx"), null, true),
+				    Source = Excel.Workbook(File.Contents("C:\Users\lisat\Documents\UKSeafood\Data\EUConsumption.xlsx"), null, true),
 				    Monthly_Consumption_Sheet = Source{[Item="Monthly_Consumption",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Monthly_Consumption_Sheet, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"country", type text}, {"year", Int64.Type}, {"month", Int64.Type}, {"MCS", type text}, {"CG", type text}, {"volume(Kg)", type number}, {"weight", type text}, {"value(EUR)", type number}}),

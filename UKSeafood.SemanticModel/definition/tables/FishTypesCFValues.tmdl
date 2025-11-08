@@ -113,35 +113,6 @@ table FishTypesCFValues
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column VitaminA_µg100g
-		dataType: int64
-		formatString: 0
-		lineageTag: ccb7f0b7-d8e5-4248-b899-5b1216cdf3c5
-		summarizeBy: none
-		sourceColumn: VitaminA_µg100g
-
-		annotation SummarizationSetBy = Automatic
-
-	column VitaminD_µg100g
-		dataType: double
-		lineageTag: 3aeff8d2-6507-4a11-a4df-e0e7dadb48ea
-		summarizeBy: none
-		sourceColumn: VitaminD_µg100g
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column VitaminB12_µg100g
-		dataType: double
-		lineageTag: 5ba1e71c-5d95-4a4d-8bd1-554810c40b48
-		summarizeBy: none
-		sourceColumn: VitaminB12_µg100g
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Zinc_mg100g
 		dataType: double
 		lineageTag: 083ca9ab-5bfb-40c4-902e-0df2e84927a3
@@ -171,21 +142,50 @@ table FishTypesCFValues
 
 		annotation SummarizationSetBy = Automatic
 
-	column Selenium_µg100g
+	column VitaminA_Ä¾g100g
 		dataType: int64
 		formatString: 0
-		lineageTag: 2d449113-4422-4f06-aa21-63af3cef681c
+		lineageTag: f69460ab-e7a9-4f98-910a-9f37b1efd724
 		summarizeBy: none
-		sourceColumn: Selenium_µg100g
+		sourceColumn: VitaminA_Ä¾g100g
 
 		annotation SummarizationSetBy = Automatic
 
-	column Iodine_µg100g
+	column VitaminD_Ä¾g100g
+		dataType: double
+		lineageTag: e5729989-1d10-4142-a213-d81f542fa8c9
+		summarizeBy: none
+		sourceColumn: VitaminD_Ä¾g100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VitaminB12_Ä¾g100g
+		dataType: double
+		lineageTag: 929e9cce-e583-4d6b-b97d-8fa355f92585
+		summarizeBy: none
+		sourceColumn: VitaminB12_Ä¾g100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Selenium_Ä¾g100g
 		dataType: int64
 		formatString: 0
-		lineageTag: 69a8cf16-0d25-41f6-850b-f09c3d12e753
+		lineageTag: d10a4d74-86e1-4609-9760-630e902a143d
 		summarizeBy: none
-		sourceColumn: Iodine_µg100g
+		sourceColumn: Selenium_Ä¾g100g
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iodine_Ä¾g100g
+		dataType: int64
+		formatString: 0
+		lineageTag: aede7f33-3f4b-48d5-9ce7-515b93bf55f0
+		summarizeBy: none
+		sourceColumn: Iodine_Ä¾g100g
 
 		annotation SummarizationSetBy = Automatic
 
@@ -193,7 +193,7 @@ table FishTypesCFValues
 		mode: import
 		source = ```
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\SeafoodMatchingList.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\lisat\Documents\UKSeafood\Data\SeafoodMatchingList.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"UniqueSeafoodSpecies", type text}, {"CommonSpeciesName", type text}, {"SACN_Desc", type text}, {"CFValue", type number}, {"ISSCAAP_Desc", type text}, {"ISSCAAP_Code", type text}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"ISSCAAP_Code"}),
@@ -215,7 +215,7 @@ table FishTypesCFValues
 				    #"Pivoted Column" = Table.Pivot(#"Filtered Rows", List.Distinct(#"Filtered Rows"[DataSupplier]), "DataSupplier", "CFValue", List.Sum),
 				    #"Reordered Columns" = Table.ReorderColumns(#"Pivoted Column",{"CommonSpeciesNameDetail", "CommonSpeciesName", "SACN_Desc", "ISSCAAP_Desc", "HMRC", "NDNS", "CEFAS", "MMO", "DEFRA_eatenOut", "DEFRA_household"}),
 				    #"Merged Queries" = Table.NestedJoin(#"Reordered Columns", {"CommonSpeciesNameDetail"}, FishNutrition, {"Species"}, "FishNutrition", JoinKind.LeftOuter),
-				    #"Expanded FishNutrition" = Table.ExpandTableColumn(#"Merged Queries", "FishNutrition", {"Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_µg100g", "VitaminD_µg100g", "VitaminB12_µg100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_µg100g", "Iodine_µg100g"}, {"Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_µg100g", "VitaminD_µg100g", "VitaminB12_µg100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_µg100g", "Iodine_µg100g"}),
+				    #"Expanded FishNutrition" = Table.ExpandTableColumn(#"Merged Queries", "FishNutrition", {"Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_Ä¾g100g", "VitaminD_Ä¾g100g", "VitaminB12_Ä¾g100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_Ä¾g100g", "Iodine_Ä¾g100g"}, {"Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_Ä¾g100g", "VitaminD_Ä¾g100g", "VitaminB12_Ä¾g100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_Ä¾g100g", "Iodine_Ä¾g100g"}),
 				    #"Appended Query" = Table.Combine({#"Expanded FishNutrition", MissingSpecies})
 				in
 				    #"Appended Query"

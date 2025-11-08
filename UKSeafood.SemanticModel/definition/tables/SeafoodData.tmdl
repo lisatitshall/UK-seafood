@@ -322,7 +322,7 @@ table SeafoodData
 		mode: import
 		source = ```
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\UKSeafoodSupplyChain.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\lisat\Documents\UKSeafood\Data\UKSeafoodSupplyChain.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"DataSet", type text}, {"Commodity", type text}, {"Species", type text}, {"SpeciesType", type text}, {"SACN", type text}, {"Volume", type text}, {"Units", type text}, {"CalendarYear", Int64.Type}, {"TemporalResolution", type text}, {"Flag", type text}, {"FlagDescription", type text}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"Volume"}),

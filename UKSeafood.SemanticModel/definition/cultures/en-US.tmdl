@@ -3426,63 +3426,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fish_nutrition.VitaminA_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishNutrition",
-			          "ConceptualProperty": "VitaminA_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "VitaminA_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "fish_nutrition.VitaminD_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishNutrition",
-			          "ConceptualProperty": "VitaminD_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "VitaminD_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "fish_nutrition.VitaminB12_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishNutrition",
-			          "ConceptualProperty": "VitaminB12_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "VitaminB12_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "fish_nutrition.zinc_mg_10_0g": {
 			      "Definition": {
 			        "Binding": {
@@ -3557,44 +3500,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "fish_nutrition.selenium_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishNutrition",
-			          "ConceptualProperty": "Selenium_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "selenium_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "fish_nutrition.iodine_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishNutrition",
-			          "ConceptualProperty": "Iodine_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "iodine_µg100g": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -8416,54 +8321,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fish_types_CF_value.VitaminA_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishTypesCFValues",
-			          "ConceptualProperty": "VitaminA_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "VitaminA_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "fish_types_CF_value.VitaminD_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishTypesCFValues",
-			          "ConceptualProperty": "VitaminD_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "VitaminD_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "fish_types_CF_value.VitaminB12_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishTypesCFValues",
-			          "ConceptualProperty": "VitaminB12_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "VitaminB12_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "fish_types_CF_value.zinc_mg_10_0g": {
 			      "Definition": {
 			        "Binding": {
@@ -8529,38 +8386,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "fish_types_CF_value.selenium_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishTypesCFValues",
-			          "ConceptualProperty": "Selenium_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "selenium_µg100g": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "fish_types_CF_value.iodine_µg100g": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FishTypesCFValues",
-			          "ConceptualProperty": "Iodine_µg100g"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "iodine_µg100g": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]

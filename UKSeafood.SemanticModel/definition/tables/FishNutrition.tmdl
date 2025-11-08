@@ -39,44 +39,6 @@ table FishNutrition
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column VitaminA_µg100g
-		dataType: int64
-		isHidden
-		formatString: 0
-		lineageTag: e74e388f-7d43-4d74-ae46-212139aab067
-		summarizeBy: sum
-		sourceColumn: VitaminA_µg100g
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-	column VitaminD_µg100g
-		dataType: double
-		isHidden
-		lineageTag: 17287f6e-7e03-4a2e-b510-6f8d74917137
-		summarizeBy: sum
-		sourceColumn: VitaminD_µg100g
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column VitaminB12_µg100g
-		dataType: double
-		isHidden
-		lineageTag: 1e92edcf-3bc6-47cf-af29-cc524616dd9d
-		summarizeBy: sum
-		sourceColumn: VitaminB12_µg100g
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Zinc_mg100g
 		dataType: double
 		isHidden
@@ -115,27 +77,50 @@ table FishNutrition
 
 		annotation SummarizationSetBy = Automatic
 
-	column Selenium_µg100g
+	column VitaminA_Ä¾g100g
 		dataType: int64
-		isHidden
 		formatString: 0
-		lineageTag: 0b528245-1062-4606-a5ae-f6456cd8214e
+		lineageTag: d5b0bd27-46f3-4221-8729-99d5a72db3ce
 		summarizeBy: sum
-		sourceColumn: Selenium_µg100g
-
-		changedProperty = IsHidden
+		sourceColumn: VitaminA_Ä¾g100g
 
 		annotation SummarizationSetBy = Automatic
 
-	column Iodine_µg100g
-		dataType: int64
-		isHidden
-		formatString: 0
-		lineageTag: e04a1acf-5f3e-40ea-821d-f2881d264e9d
+	column VitaminD_Ä¾g100g
+		dataType: double
+		lineageTag: 431c2a34-b2f8-4b94-93c3-8ff6637629d2
 		summarizeBy: sum
-		sourceColumn: Iodine_µg100g
+		sourceColumn: VitaminD_Ä¾g100g
 
-		changedProperty = IsHidden
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VitaminB12_Ä¾g100g
+		dataType: double
+		lineageTag: 89bfc55b-d6cd-40d2-bb92-ae24999f37f0
+		summarizeBy: sum
+		sourceColumn: VitaminB12_Ä¾g100g
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Selenium_Ä¾g100g
+		dataType: int64
+		formatString: 0
+		lineageTag: d39404d0-343f-4810-8d2c-098b344a44a1
+		summarizeBy: sum
+		sourceColumn: Selenium_Ä¾g100g
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iodine_Ä¾g100g
+		dataType: int64
+		formatString: 0
+		lineageTag: c3df00e5-ceff-4653-bfd4-1b45db88ed5d
+		summarizeBy: sum
+		sourceColumn: Iodine_Ä¾g100g
 
 		annotation SummarizationSetBy = Automatic
 
@@ -143,9 +128,9 @@ table FishNutrition
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\44784\Documents\UKSeafood\UKSeafoodSupplyComposition.csv"),[Delimiter=",", Columns=20, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\lisat\Documents\UKSeafood\Data\UKSeafoodSupplyComposition.csv"),[Delimiter=",", Columns=20, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"Species", type text}, {"CalendarYear", Int64.Type}, {"SpeciesType", type text}, {"SACN", type text}, {"Imports", type text}, {"Exports", type text}, {"Consumption", type text}, {"Production", type text}, {"Purchases", type text}, {"UKPOP", Int64.Type}, {"Protein_g100g", type number}, {"Omega3_DHAEPA_g100g", type number}, {"VitaminA_µg100g", type text}, {"VitaminD_µg100g", type text}, {"VitaminB12_µg100g", type number}, {"Zinc_mg100g", type number}, {"Iron_mg100g", type number}, {"Calcium_mg100g", Int64.Type}, {"Selenium_µg100g", Int64.Type}, {"Iodine_µg100g", type text}}),
+				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"Species", type text}, {"CalendarYear", Int64.Type}, {"SpeciesType", type text}, {"SACN", type text}, {"Imports", type text}, {"Exports", type text}, {"Consumption", type text}, {"Production", type text}, {"Purchases", type text}, {"UKPOP", Int64.Type}, {"Protein_g100g", type number}, {"Omega3_DHAEPA_g100g", type number}, {"VitaminA_Ä¾g100g", type text}, {"VitaminD_Ä¾g100g", type text}, {"VitaminB12_Ä¾g100g", type number}, {"Zinc_mg100g", type number}, {"Iron_mg100g", type number}, {"Calcium_mg100g", Int64.Type}, {"Selenium_Ä¾g100g", Int64.Type}, {"Iodine_Ä¾g100g", type text}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"Imports"}),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Imports", Int64.Type}}),
 				    #"Replaced Value1" = Table.ReplaceValue(#"Changed Type","NA","",Replacer.ReplaceText,{"Exports"}),
@@ -156,14 +141,14 @@ table FishNutrition
 				    #"Changed Type2" = Table.TransformColumnTypes(#"Replaced Value3",{{"Production", Int64.Type}}),
 				    #"Replaced Value4" = Table.ReplaceValue(#"Changed Type2","NA","",Replacer.ReplaceText,{"Purchases"}),
 				    #"Changed Type4" = Table.TransformColumnTypes(#"Replaced Value4",{{"Purchases", Int64.Type}}),
-				    #"Replaced Value5" = Table.ReplaceValue(#"Changed Type4","NA","",Replacer.ReplaceText,{"VitaminA_µg100g"}),
-				    #"Changed Type5" = Table.TransformColumnTypes(#"Replaced Value5",{{"VitaminA_µg100g", Int64.Type}}),
-				    #"Replaced Value6" = Table.ReplaceValue(#"Changed Type5","NA","",Replacer.ReplaceText,{"VitaminD_µg100g"}),
-				    #"Changed Type6" = Table.TransformColumnTypes(#"Replaced Value6",{{"VitaminD_µg100g", type number}}),
-				    #"Replaced Value7" = Table.ReplaceValue(#"Changed Type6","NA","",Replacer.ReplaceText,{"Iodine_µg100g"}),
-				    #"Changed Type7" = Table.TransformColumnTypes(#"Replaced Value7",{{"Iodine_µg100g", Int64.Type}}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Changed Type4","NA","",Replacer.ReplaceText,{"VitaminA_Ä¾g100g"}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Replaced Value5",{{"VitaminA_Ä¾g100g", Int64.Type}}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Changed Type5","NA","",Replacer.ReplaceText,{"VitaminD_Ä¾g100g"}),
+				    #"Changed Type6" = Table.TransformColumnTypes(#"Replaced Value6",{{"VitaminD_Ä¾g100g", type number}}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Changed Type6","NA","",Replacer.ReplaceText,{"Iodine_Ä¾g100g"}),
+				    #"Changed Type7" = Table.TransformColumnTypes(#"Replaced Value7",{{"Iodine_Ä¾g100g", Int64.Type}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type7",{"UKPOP"}),
-				    #"Grouped Rows" = Table.Group(#"Removed Columns", {"Species", "Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_µg100g", "VitaminD_µg100g", "VitaminB12_µg100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_µg100g", "Iodine_µg100g"}, {{"Count", each Table.RowCount(_), Int64.Type}}),
+				    #"Grouped Rows" = Table.Group(#"Removed Columns", {"Species", "Protein_g100g", "Omega3_DHAEPA_g100g", "VitaminA_Ä¾g100g", "VitaminD_Ä¾g100g", "VitaminB12_Ä¾g100g", "Zinc_mg100g", "Iron_mg100g", "Calcium_mg100g", "Selenium_Ä¾g100g", "Iodine_Ä¾g100g"}, {{"Count", each Table.RowCount(_), Int64.Type}}),
 				    #"Removed Columns1" = Table.RemoveColumns(#"Grouped Rows",{"Count"})
 				in
 				    #"Removed Columns1"
