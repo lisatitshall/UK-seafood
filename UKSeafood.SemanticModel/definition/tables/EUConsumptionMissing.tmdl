@@ -183,7 +183,7 @@ table EUConsumptionMissing
 
 	partition EUConsumptionMissing = m
 		mode: import
-		source =
+		source = ```
 				let
 				    Source = Excel.Workbook(File.Contents("C:\Users\lisat\Documents\UKSeafood\Data\EUConsumption.xlsx"), null, true),
 				    Monthly_Consumption_Sheet = Source{[Item="Monthly_Consumption",Kind="Sheet"]}[Data],
@@ -192,18 +192,22 @@ table EUConsumptionMissing
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"weight", "value(EUR)", "MCS"}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"volume(Kg)", "NetWeightGrams"}}),
 				    #"Multiplied Column" = Table.TransformColumns(#"Renamed Columns", {{"NetWeightGrams", each _ * 1000, type number}}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Multiplied Column","Alaska pollock","Pollock",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Flounder, other","Flounder",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Halibut, other","Halibut",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Monk","Monkfish",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Mussel Mytilus spp","Mussel",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Plaice, other","Plaice",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Saithe (=Coalfish)","Pollock",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","Seabass, European","Seabass",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Seabream, gilthead","Bream",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","Sole, other","Sole",Replacer.ReplaceText,{"CG"}),
-				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","Tuna, miscellaneous","Tuna",Replacer.ReplaceText,{"CG"}),
-				    #"Grouped Rows" = Table.Group(#"Replaced Value10", {"country", "year", "CG"}, {{"ConsumptionNetWeightGrams", each List.Sum([NetWeightGrams]), type number}}),
+				    #"Simplify fish names" = Table.ReplaceValue(#"Multiplied Column",
+				    each [CG], 
+				    each if [CG] = "Alaska pollock" then "Pollock"
+				    else if [CG] = "Flounder, other" then "Flounder"
+				    else if [CG] = "Halibut, other" then "Halibut"
+				    else if [CG] = "Monk" then "Monkfish"
+				    else if [CG] = "Mussel Mytilus spp" then "Mussel"
+				    else if [CG] = "Plaice, other" then "Plaice"
+				    else if [CG] = "Saithe (=Coalfish)" then "Pollock"
+				    else if [CG] = "Seabass, European" then "Seabass"
+				    else if [CG] = "Seabream, gilthead" then "Bream"
+				    else if [CG] = "Sole, other" then "Sole"
+				    else if [CG] = "Tuna, miscellaneous" then "Tuna"
+				    else [CG],
+				    Replacer.ReplaceText,{"CG"}),
+				    #"Grouped Rows" = Table.Group(#"Simplify fish names", {"country", "year", "CG"}, {{"ConsumptionNetWeightGrams", each List.Sum([NetWeightGrams]), type number}}),
 				    #"Sorted Rows1" = Table.Sort(#"Grouped Rows",{{"CG", Order.Ascending}}),
 				    #"Pivoted Column" = Table.Pivot(#"Sorted Rows1", List.Distinct(#"Sorted Rows1"[country]), "country", "ConsumptionNetWeightGrams", List.Sum),
 				    #"Trimmed Text" = Table.TransformColumns(#"Pivoted Column",{{"CG", Text.Trim, type text}}),
@@ -211,6 +215,7 @@ table EUConsumptionMissing
 				    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"year", "CalendarYear"}, {"CG", "SpeciesDetail"}})
 				in
 				    #"Renamed Columns1"
+				```
 
 	changedProperty = IsHidden
 

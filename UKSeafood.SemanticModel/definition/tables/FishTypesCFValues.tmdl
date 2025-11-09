@@ -152,7 +152,7 @@ table FishTypesCFValues
 		annotation SummarizationSetBy = Automatic
 
 	column VitaminD_Ä¾g100g
-		dataType: double
+		dataType: int64
 		lineageTag: e5729989-1d10-4142-a213-d81f542fa8c9
 		summarizeBy: none
 		sourceColumn: VitaminD_Ä¾g100g
@@ -195,9 +195,9 @@ table FishTypesCFValues
 				let
 				    Source = Csv.Document(File.Contents("C:\Users\lisat\Documents\UKSeafood\Data\SeafoodMatchingList.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Change Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"UniqueSeafoodSpecies", type text}, {"CommonSpeciesName", type text}, {"SACN_Desc", type text}, {"CFValue", type number}, {"ISSCAAP_Desc", type text}, {"ISSCAAP_Code", type text}}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Change Type","NA","",Replacer.ReplaceText,{"ISSCAAP_Code"}),
-				    #"Trimmed Text" = Table.TransformColumns(#"Replaced Value",{{"CommonSpeciesName", Text.Trim, type text}, {"SACN_Desc", Text.Trim, type text}, {"ISSCAAP_Desc", Text.Trim, type text}}),
+				    #"Change Data Types" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"DataSupplier", type text}, {"UniqueSeafoodSpecies", type text}, {"CommonSpeciesName", type text}, {"SACN_Desc", type text}, {"CFValue", type number}, {"ISSCAAP_Desc", type text}, {"ISSCAAP_Code", type text}}),
+				    #"Replace NA's with blanks" = Table.ReplaceValue(#"Change Data Types","NA","",Replacer.ReplaceText,{"ISSCAAP_Code"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Replace NA's with blanks",{{"CommonSpeciesName", Text.Trim, type text}, {"SACN_Desc", Text.Trim, type text}, {"ISSCAAP_Desc", Text.Trim, type text}}),
 				    #"Added Custom" = Table.AddColumn(#"Trimmed Text", "CommonSpeciesNameDetail", each
 				if [CommonSpeciesName] = "Fish dish" and [SACN_Desc] = "Other" then "Fish dish other" 
 				else if [CommonSpeciesName] = "Fish dish" and [SACN_Desc] = "Oily" then "Fish dish oily" 
